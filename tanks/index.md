@@ -11,22 +11,49 @@ Each tank has its own ecosystem.
 
 ### 🐢 Turtle Tank #1
 **Type:** Freshwater turtle habitat  
-**Volume:** 75 gallons  
-**Inhabitants:** Red-eared sliders  
-**Focus:** Basking, filtration, long-term care  
+**Volume:** 100 gallons  
+**Inhabitants:** 2 Red-eared sliders  
+<!-- **Focus:** Basking, filtration, long-term care   -->
 
 [View tank details →](/tanks/turtle-tank-1)
+
+### 🐢 Turtle Tank #2
+**Type:** Freshwater turtle habitat  
+**Volume:** 75 gallons  
+**Inhabitants:** 1 Red-eared slider + lots of guppy fish
+
+[View tank details →](/tanks/turtle-tank-2)
 
 ### 🐠 Guppy Tank #1
 **Type:** Heavily planted community tank  
 **Volume:** 20 gallons  
 **Inhabitants:** Guppies, snails  
-**Focus:** Livebearers, plant growth, balance  
+<!-- **Focus:** Livebearers, plant growth, balance   -->
 
 [View tank details →](/tanks/guppy-tank-1)
 
+### 🐠 Guppy Tank #2
+**Type:** Heavily planted community tank  
+**Volume:** 20 gallons  
+**Inhabitants:** Guppies, snails  
 
-## Inhabitants
+[View tank details →](/tanks/guppy-tank-2)
+
+### 🐠 Snail Tank
+**Type:** Extra plants + snails
+**Volume:** 5 gallons  
+**Inhabitants:** Ramshorn snails
+
+<!-- [View tank details →](/tanks/snail-tank) -->
+
+### 🐠 Plant Tank
+**Type:** Extra plants + snails
+**Volume:** 10 gallons  
+**Inhabitants:** Ramshorn snails
+
+<!-- [View tank details →](/tanks/snail-tank) -->
+
+<!-- ## Inhabitants
 - 🐢 **Turtles** – Red-eared sliders  
   [Learn more →](/animals/turtles)
 
@@ -34,7 +61,7 @@ Each tank has its own ecosystem.
   [Learn more →](/animals/guppies)
 
 - 🐌 **Snails** – Clean-up crew and algae control  
-  [Learn more →](/animals/snails)
+  [Learn more →](/animals/snails) -->
 
 
 ## Notes & Observations
