@@ -4,6 +4,7 @@ title: Turtle Tank 1
 subtitle: Red-Eared Slider Habitat
 ---
 
+<section>
 ## Setup
 
 - **Tank Size:** 100 gallons  
@@ -12,6 +13,7 @@ subtitle: Red-Eared Slider Habitat
 - **Heating:** Aqueon Pro 300
 - **Filtration:** Fluval FX6
 - **Air:** Large pond air stone powered by a shared AquaMiracle 600 GPH air pump
+</section>
 
 ## Plants & Decorations
 
