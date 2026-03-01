@@ -2,7 +2,7 @@
 layout: default
 title: Aquariums & Tanks
 subtitle: Six planted tanks, turtles, guppies, and invertebrates
-tank-card
+body_class: default-page
 ---
 
 I currently maintain six aquariums, ranging from plant-only tanks to large turtle setups.  

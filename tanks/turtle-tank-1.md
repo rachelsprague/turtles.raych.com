@@ -2,6 +2,7 @@
 layout: default
 title: Turtle Tank 1
 subtitle: Red-Eared Slider Habitat
+body_class: default-page
 ---
 
 <section>
