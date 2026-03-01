@@ -354,3 +354,12 @@ body.snails-page .page-content > * {
   border: 1px solid rgba(120, 180, 120, 0.2);
   box-shadow: 0 4px 16px rgba(0,0,0,0.1), 0 0 4px rgba(120,180,120,0.1);
 }
+
+.tank-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border: 1px solid rgba(0,0,0,0.05);
+}
