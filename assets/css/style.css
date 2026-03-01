@@ -10,26 +10,13 @@ body {
   background: #f5f5f5; /* fallback background */
 }
 
-/* Centered main container */
 main {
   margin: 0 auto;
   width: 100%;
 }
 
-body.turtles-page {
-  background: url('/assets/images/turtle-background.jpg') no-repeat center center;
-  background-size: cover;
-  background-attachment: fixed;
-}
-
-body.home-page {
-  background: url('/assets/images/raych-background.png') no-repeat center center;
-  background-size: cover;
-  background-attachment: fixed; /* optional parallax effect */
-}
-
 /* ================================
-   Landing page container
+   Landing page
    ================================ */
 .landing-container {
   background: rgba(17, 17, 17, 0.85);
@@ -42,24 +29,20 @@ body.home-page {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
 }
 
-/* Turtle Cove subtle green accent */
 body.turtles-page .landing-container {
-  border: 1px solid rgba(120, 180, 120, 0.35); /* soft green border */
+  border: 1px solid rgba(120, 180, 120, 0.35);
   box-shadow:
     0 6px 18px rgba(0, 0, 0, 0.45),
-    0 0 0 1px rgba(120, 180, 120, 0.15); /* faint green glow */
+    0 0 0 1px rgba(120, 180, 120, 0.15);
 }
 
-/* Improve text readability over photos */
 .landing-container h2,
 .landing-container a,
 .landing-container p {
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-/* ================================
-   Logo
-   ================================ */
+/* Logo */
 .logo {
   width: 120px;
   height: 120px;
@@ -70,9 +53,7 @@ body.turtles-page .landing-container {
   padding: 3px;
 }
 
-/* ================================
-   Inline social icons
-   ================================ */
+/* Social icons */
 .social-icons-inline {
   display: flex;
   justify-content: center;
@@ -95,7 +76,6 @@ body.turtles-page .landing-container {
   opacity: 0.75;
 }
 
-/* Simple Icons SVG */
 .social-svg {
   width: 32px;
   height: 32px;
@@ -103,9 +83,7 @@ body.turtles-page .landing-container {
   filter: invert(1);
 }
 
-/* ================================
-   Buttons / Links
-   ================================ */
+/* Landing page buttons */
 .landing-container a:not(.social-icons-inline a) {
   display: block;
   margin: 0.8rem auto;
@@ -116,7 +94,7 @@ body.turtles-page .landing-container {
   color: #eee;
   background: #000;
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.5); /* <-- thin white border added */
+  border: 1px solid rgba(255, 255, 255, 0.5);
   font-weight: 500;
   font-size: 1.1rem;
   transition: background 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
@@ -124,58 +102,18 @@ body.turtles-page .landing-container {
 
 .landing-container a:not(.social-icons-inline a):hover {
   background: #333;
-  border-color: rgba(255, 255, 255, 0.85); /* brighten border on hover */
+  border-color: rgba(255, 255, 255, 0.85);
   transform: scale(1.02);
-}
-
-/* ================================
-   Section headings
-   ================================ */
-h2 {
-  margin-top: 2rem;
-  font-size: 1.3rem;
-  color: #ccc;
-}
-
-/* ================================
-   Blog / Article pages
-   ================================ */
-article h1 {
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
-}
-
-article p em {
-  color: #aaa;
-  font-size: 0.9rem;
-}
-
-/* ================================
-   General headings
-   ================================ */
-h1 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-}
-
-/* ================================
-   Desktop tweaks
-   ================================ */
-@media screen and (min-width: 1024px) {
-  main {
-    max-width: 720px;
-  }
 }
 
 /* ================================
    Default page layout (non-landing)
    ================================ */
-
 .page-container {
-  max-width: 720px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 2.5rem 1.5rem;
-  text-align: left; /* override centered landing style */
+  padding: 2rem 1.5rem;
+  text-align: left;
 }
 
 /* Page header */
@@ -186,17 +124,22 @@ h1 {
 .page-header h1 {
   font-size: 2.2rem;
   margin-bottom: 0.5rem;
-  color: #111;
+  color: #2b2b2b;
+  border-bottom: 2px solid rgba(0,0,0,0.1);
+  padding-bottom: 0.4rem;
 }
 
 .page-subtitle {
-  font-size: 1.1rem;
-  color: #666;
-  margin: 0;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
 }
 
 /* Main content */
 .page-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   font-size: 1rem;
   color: #222;
 }
@@ -206,90 +149,26 @@ h1 {
 }
 
 .page-content h2 {
+  font-size: 1.6rem;
   margin-top: 3rem;
   margin-bottom: 1rem;
-  font-size: 1.6rem;
   color: #111;
 }
 
 .page-content h3 {
+  font-size: 1.25rem;
   margin-top: 2rem;
   margin-bottom: 0.75rem;
-  font-size: 1.25rem;
   color: #333;
 }
 
 .page-content ul {
   padding-left: 1.25rem;
   margin-bottom: 1.5rem;
-}
-
-.page-content li {
-  margin-bottom: 0.4rem;
-}
-
-/* ================================
-   Tank / Default page styling
-   ================================ */
-body.turtles-page, body.guuppy-page, body.animals-page {
-  background-color: #f9f9f9; /* light neutral background */
-  color: #222;
-  padding: 2rem;
-}
-
-/* Main page container */
-.page-container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 1rem 2rem;
-}
-
-/* Page header */
-.page-header h1 {
-  font-size: 2.2rem;
-  margin-bottom: 0.2rem;
-  color: #2b2b2b;
-  border-bottom: 2px solid rgba(0,0,0,0.1);
-  padding-bottom: 0.4rem;
-}
-
-.page-header .page-subtitle {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 1.5rem;
-}
-
-/* Page content */
-.page-content {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-/* Tank / Animal section cards */
-.page-content section {
-  background: #fff;
-  border-radius: 15px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  border: 1px solid rgba(0,0,0,0.05);
-}
-
-/* Section headings inside cards */
-.page-content section h2 {
-  font-size: 1.5rem;
-  color: #333;
-  margin-bottom: 0.8rem;
-}
-
-/* Lists (setup, plants, inhabitants) */
-.page-content section ul {
-  list-style: disc inside;
-  margin-left: 1rem;
   color: #444;
 }
 
-.page-content section ul li {
+.page-content li {
   margin-bottom: 0.5rem;
 }
 
@@ -303,7 +182,6 @@ body.turtles-page, body.guuppy-page, body.animals-page {
   object-fit: cover;
 }
 
-/* Image captions */
 .page-content img + p {
   font-size: 0.9rem;
   color: #666;
@@ -312,31 +190,20 @@ body.turtles-page, body.guuppy-page, body.animals-page {
   text-align: center;
 }
 
-/* Optional: subtle divider between sections */
+/* Optional divider */
 .page-content hr {
   border: none;
   border-top: 1px solid rgba(0,0,0,0.05);
   margin: 2rem 0;
 }
 
-/* Responsive tweaks */
-@media screen and (min-width: 1024px) {
-  .page-container {
-    padding: 2rem 3rem;
-  }
-
-  .page-content section {
-    padding: 2rem;
-  }
-}
-
 /* ================================
-   Tank / Default page card styling
+   Tank / Animal card styling
    ================================ */
-
-/* Apply card style to all direct children of .page-content */
+.tank-card,
+.page-content section,
 .page-content > * {
-  background: #fff;                  /* card background */
+  background: #fff;
   border-radius: 15px;
   padding: 1.5rem;
   margin-bottom: 2rem;
@@ -344,22 +211,53 @@ body.turtles-page, body.guuppy-page, body.animals-page {
   border: 1px solid rgba(0,0,0,0.05);
   text-align: left;
   line-height: 1.5;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Optional: different card style for turtle / animals pages */
-body.turtles-page .page-content > *,
-body.guypies-page .page-content > *,
-body.snails-page .page-content > * {
-  background: rgba(255, 255, 255, 0.9); /* softer card over images */
-  border: 1px solid rgba(120, 180, 120, 0.2);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.1), 0 0 4px rgba(120,180,120,0.1);
+.tank-card:hover,
+.page-content section:hover,
+.page-content > *:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
 }
 
-.tank-card {
-  background: #fff;
-  border-radius: 15px;
-  padding: 1.5rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  border: 1px solid rgba(0,0,0,0.05);
+/* Tank card inner elements */
+.tank-card h3,
+.page-content section h2 {
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+}
+
+.tank-card p,
+.tank-card ul,
+.tank-card li {
+  margin: 0.3rem 0;
+  line-height: 1.5;
+}
+
+.tank-card a {
+  display: inline-block;
+  margin-top: 0.8rem;
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.tank-card a:hover {
+  color: #005fa3;
+}
+
+/* ================================
+   Responsive tweaks
+   ================================ */
+@media screen and (min-width: 1024px) {
+  .page-container {
+    padding: 2rem 3rem;
+  }
+
+  .page-content section,
+  .tank-card {
+    padding: 2rem;
+  }
 }
