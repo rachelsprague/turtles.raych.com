@@ -329,3 +329,28 @@ body.turtles-page, body.guuppy-page, body.animals-page {
     padding: 2rem;
   }
 }
+
+/* ================================
+   Tank / Default page card styling
+   ================================ */
+
+/* Apply card style to all direct children of .page-content */
+.page-content > * {
+  background: #fff;                  /* card background */
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border: 1px solid rgba(0,0,0,0.05);
+  text-align: left;
+  line-height: 1.5;
+}
+
+/* Optional: different card style for turtle / animals pages */
+body.turtles-page .page-content > *,
+body.guypies-page .page-content > *,
+body.snails-page .page-content > * {
+  background: rgba(255, 255, 255, 0.9); /* softer card over images */
+  border: 1px solid rgba(120, 180, 120, 0.2);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1), 0 0 4px rgba(120,180,120,0.1);
+}
