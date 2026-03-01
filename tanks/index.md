@@ -2,6 +2,7 @@
 layout: default
 title: Aquariums & Tanks
 subtitle: Six planted tanks, turtles, guppies, and invertebrates
+tank-card
 ---
 
 I currently maintain six aquariums, ranging from plant-only tanks to large turtle setups.  
@@ -48,12 +49,12 @@ Each tank has its own ecosystem.
 </div>
 
 <div class="tank-card">
-### 🐠 Snail Tank
-**Type:** Extra plants + snails
-**Volume:** 5 gallons  
-**Inhabitants:** Ramshorn snails
+    ### 🐠 Snail Tank
+    **Type:** Extra plants + snails
+    **Volume:** 5 gallons  
+    **Inhabitants:** Ramshorn snails
 
-<!-- [View tank details →](/tanks/snail-tank) -->
+    <!-- [View tank details →](/tanks/snail-tank) -->
 </div>
 
 <div class="tank-card">
