@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Turtle Tank 1
+title: Turtle Tank 2
 subtitle: Red-Eared Slider Habitat
 ---
 
