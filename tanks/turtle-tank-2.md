@@ -6,32 +6,33 @@ subtitle: Red-Eared Slider Habitat
 
 ## Setup
 
-- **Tank Size:** 100 gallons  
-- **Substrate:** River rocks
+- **Tank Size:** 75 gallons  
+- **Substrate:** Bare
 - **Lighting:** UVB (Zoo Med ReptiSun T5 HO 24” (10.0 UVB) + basking lamp + flood light
 - **Heating:** Aqueon Pro 300
-- **Filtration:** Fluval FX6
+- **Filtration:** Fluval FX6 + EHEIM 6664 prefilter
+- **Flow:** FREESEA 1600 GPH wavemaker
 - **Air:** Large pond air stone powered by a shared AquaMiracle 600 GPH air pump
 
 ## Plants & Decorations
 
-- Plants: None. The turtles eat everything
-- Mopani wood
+- Plants: None. She eats everything
 - Basking platform: DIY above-tank PVC platform
+- Mopani wood
 
 ## Inhabitants
 
-- **Turtles:** 2 Red-Eared Sliders (~20 years old)  
-- **Tank Mates:** None (turtles only)  
+- **Turtles:** 1 Red-Eared Sliders (~20 years old)  
+- **Tank Mates:** lots of guppy fish
 - **Feeding:** Pellets, leafy greens, occasional carrots
 
 ## Notes & History
 
-- Established: 2008  
+- Established: 2023
 - Water change schedule: 75% bi-weekly
 <!-- - Special observations: Likes basking near the sunset; most active at mid-day   -->
 <!-- - Future improvements: Consider adding additional floating plants for shade   -->
-- I’ve had these gals since they were babies—about the size of a quarter. I got them **20 years ago** and learned a lot along the way. As they grew, I upgraded their space and eventually found this tank on Craigslist. They grew fast… and kept growing.
+- After 17–18 years of cohabitation, some aggression developed and the turtles needed to be separated—resulting in a second full turtle setup.
 
 <!-- ## Images
 

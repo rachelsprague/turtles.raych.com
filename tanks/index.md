@@ -15,7 +15,7 @@ Each tank has its own ecosystem.
 **Inhabitants:** Red-eared sliders  
 **Focus:** Basking, filtration, long-term care  
 
-[View tank details →](/tanks/turtle-tank-1/)
+[View tank details →](/tanks/turtle-tank-1)
 
 ### 🐠 Guppy Tank #1
 **Type:** Heavily planted community tank  
@@ -23,18 +23,18 @@ Each tank has its own ecosystem.
 **Inhabitants:** Guppies, snails  
 **Focus:** Livebearers, plant growth, balance  
 
-[View tank details →](/tanks/guppy-tank-1/)
+[View tank details →](/tanks/guppy-tank-1)
 
 
 ## Inhabitants
 - 🐢 **Turtles** – Red-eared sliders  
-  [Learn more →](/animals/turtles/)
+  [Learn more →](/animals/turtles)
 
 - 🐠 **Guppies** – Multiple strains across planted tanks  
-  [Learn more →](/animals/guppies/)
+  [Learn more →](/animals/guppies)
 
 - 🐌 **Snails** – Clean-up crew and algae control  
-  [Learn more →](/animals/snails/)
+  [Learn more →](/animals/snails)
 
 
 ## Notes & Observations
