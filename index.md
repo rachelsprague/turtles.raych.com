@@ -30,7 +30,7 @@ body_class: turtles-page
   <a href="https://www.twitch.tv/raych_com" target="_blank" rel="noopener">🐠 Aquarium Livestream 🐠</a>
   <a href="https://open.spotify.com/user/31ekhjd5x5qoyln7zo4zkv4tneay" target="_blank" rel="noopener">🎧 Playlists 🎧</a>
   <a class="btn btn--primary btn--large btn--block" href="/" target="_blank" rel="noopener">Raych</a>
-  <a class="btn btn--primary btn--large btn--block" href="/makes/" target="_blank" rel="noopener">Raych Makes</a>
+  <a class="btn btn--primary btn--large btn--block" href="http://www.raych.com/makes/" target="_blank" rel="noopener">Raych Makes</a>
 
 </div>
 
