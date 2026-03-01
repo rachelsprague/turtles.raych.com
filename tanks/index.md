@@ -9,6 +9,7 @@ Each tank has its own ecosystem.
 
 ## Tank Overview
 
+{: .tank-card }
 ### 🐢 Turtle Tank #1
 **Type:** Freshwater turtle habitat  
 **Volume:** 100 gallons  
