@@ -1,168 +1,60 @@
 /* ================================
-   General page styling
+   Default page layout (non-landing)
    ================================ */
-body {
-  font-family: system-ui, -apple-system, sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  padding: 2rem;
-  text-align: center;
-  background: #f5f5f5; /* fallback background */
-}
 
-/* Centered main container */
-main {
+.page-container {
+  max-width: 720px;
   margin: 0 auto;
-  width: 100%;
+  padding: 2.5rem 1.5rem;
+  text-align: left; /* override centered landing style */
 }
 
-body.turtles-page {
-  background: url('/assets/images/turtle-background.jpg') no-repeat center center;
-  background-size: cover;
-  background-attachment: fixed;
+/* Page header */
+.page-header {
+  margin-bottom: 2.5rem;
 }
 
-body.home-page {
-  background: url('/assets/images/raych-background.png') no-repeat center center;
-  background-size: cover;
-  background-attachment: fixed; /* optional parallax effect */
-}
-
-/* ================================
-   Landing page container
-   ================================ */
-.landing-container {
-  background: rgba(17, 17, 17, 0.85);
-  color: #eee;
-  border-radius: 20px;
-  padding: 2.5rem 2rem;
-  max-width: 400px;
-  margin: 2rem auto;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
-}
-
-/* Turtle Cove subtle green accent */
-body.turtles-page .landing-container {
-  border: 1px solid rgba(120, 180, 120, 0.35); /* soft green border */
-  box-shadow:
-    0 6px 18px rgba(0, 0, 0, 0.45),
-    0 0 0 1px rgba(120, 180, 120, 0.15); /* faint green glow */
-}
-
-/* Improve text readability over photos */
-.landing-container h2,
-.landing-container a,
-.landing-container p {
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-/* ================================
-   Logo
-   ================================ */
-.logo {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-  border: 3px solid #fff;
-  padding: 3px;
-}
-
-/* ================================
-   Inline social icons
-   ================================ */
-.social-icons-inline {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 14px;
-  margin: 1rem auto 1.5rem;
-  width: max-content;
-}
-
-.social-icons-inline a {
-  color: #eee;
-  font-size: 32px;
-  text-decoration: none;
-  line-height: 1;
-  transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-.social-icons-inline a:hover {
-  transform: scale(1.1);
-  opacity: 0.75;
-}
-
-/* Simple Icons SVG */
-.social-svg {
-  width: 32px;
-  height: 32px;
-  display: block;
-  filter: invert(1);
-}
-
-/* ================================
-   Buttons / Links
-   ================================ */
-.landing-container a:not(.social-icons-inline a) {
-  display: block;
-  margin: 0.8rem auto;
-  padding: 1rem 2rem;
-  max-width: 260px;
-  text-align: center;
-  text-decoration: none;
-  color: #eee;
-  background: #000;
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.5); /* <-- thin white border added */
-  font-weight: 500;
-  font-size: 1.1rem;
-  transition: background 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
-}
-
-.landing-container a:not(.social-icons-inline a):hover {
-  background: #333;
-  border-color: rgba(255, 255, 255, 0.85); /* brighten border on hover */
-  transform: scale(1.02);
-}
-
-/* ================================
-   Section headings
-   ================================ */
-h2 {
-  margin-top: 2rem;
-  font-size: 1.3rem;
-  color: #ccc;
-}
-
-/* ================================
-   Blog / Article pages
-   ================================ */
-article h1 {
-  font-size: 1.8rem;
+.page-header h1 {
+  font-size: 2.2rem;
   margin-bottom: 0.5rem;
+  color: #111;
 }
 
-article p em {
-  color: #aaa;
-  font-size: 0.9rem;
+.page-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  margin: 0;
 }
 
-/* ================================
-   General headings
-   ================================ */
-h1 {
-  font-size: 2rem;
+/* Main content */
+.page-content {
+  font-size: 1rem;
+  color: #222;
+}
+
+.page-content p {
+  margin-bottom: 1.25rem;
+}
+
+.page-content h2 {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  color: #111;
+}
+
+.page-content h3 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  color: #333;
+}
+
+.page-content ul {
+  padding-left: 1.25rem;
   margin-bottom: 1.5rem;
 }
 
-/* ================================
-   Desktop tweaks
-   ================================ */
-@media screen and (min-width: 1024px) {
-  main {
-    max-width: 720px;
-  }
+.page-content li {
+  margin-bottom: 0.4rem;
 }

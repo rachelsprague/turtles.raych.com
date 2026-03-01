@@ -39,17 +39,3 @@ Each tank has its own ecosystem.
 
 ## Notes & Observations
 Over time, I’ll be adding write-ups on tank maintenance, lessons learned, plant growth, and species-specific notes.
-
-
-
-
-
-
-
-
-
-
-<!-- explain what Turtle Cove is
-link out to tanks
-link to articles
-stay readable -->
