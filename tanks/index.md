@@ -12,60 +12,67 @@ Each tank has its own ecosystem.
 <div class="tank-card">
   <h3>🐢 Turtle Tank #1</h3>
 
-  <p><strong>Type:</strong> Freshwater turtle habitat</p>
-  <p><strong>Volume:</strong> 100 gallons</p>
-  <p><strong>Inhabitants:</strong> 2 Red-eared sliders</p>
+  <p><strong>Type:</strong>Freshwater turtle habitat</p>
+  <p><strong>Volume:</strong>100 gallons</p>
+  <p><strong>Inhabitants:</strong>2 Red-eared sliders</p>
 
   <a href="/tanks/turtle-tank-1">View tank details →</a>
 </div>
 
-{: .tank-card }
+<div class="tank-card">
+  <h3>🐢 Turtle Tank #2</h3>
 
-### 🐢 Turtle Tank #2
-**Type:** Freshwater turtle habitat  
-**Volume:** 75 gallons  
-**Inhabitants:** 1 Red-eared slider + lots of guppy fish  
+  <p><strong>Type:</strong>Freshwater turtle habitat</p>
+  <p><strong>Volume:</strong>75 gallons</p>
+  <p><strong>Inhabitants:</strong>1 Red-eared slider + lots of guppy fish</p>
 
-[View tank details →](/tanks/turtle-tank-2)
+  <a href="/tanks/turtle-tank-2">View tank details →</a>
+</div>
 
-{: .tank-card }
+<div class="tank-card">
+  <h3>🐢 Guppy Tank #2</h3>
 
-### 🐠 Guppy Tank #1
-**Type:** Heavily planted community tank  
-**Volume:** 20 gallons  
-**Inhabitants:** Guppies, snails  
+  <p><strong>Type:</strong>Heavily planted community tank</p>
+  <p><strong>Volume:</strong>20 gallons</p>
+  <p><strong>Inhabitants:</strong>Guppies, snails</p>
 
-[View tank details →](/tanks/guppy-tank-1)
+  <a href="/tanks/guppy-tank-1">View tank details →</a>
+</div>
 
-{: .tank-card }
+<div class="tank-card">
+  <h3>🐢 Guppy Tank #2</h3>
 
-### 🐠 Guppy Tank #2
-**Type:** Heavily planted community tank  
-**Volume:** 20 gallons  
-**Inhabitants:** Guppies, snails  
+  <p><strong>Type:</strong>Heavily planted community tank</p>
+  <p><strong>Volume:</strong>20 gallons</p>
+  <p><strong>Inhabitants:</strong>Guppies, snails</p>
 
-[View tank details →](/tanks/guppy-tank-2)
+  <a href="/tanks/guppy-tank-2">View tank details →</a>
+</div>
 
-{: .tank-card }
+<div class="tank-card">
+  <h3>🐌 Snail Tank</h3>
 
-### 🐠 Snail Tank
-**Type:** Extra plants + snails  
-**Volume:** 5 gallons  
-**Inhabitants:** Ramshorn snails  
+  <p><strong>Type:</strong>Extra plants + snails</p>
+  <p><strong>Volume:</strong>5 gallons</p>
+  <p><strong>Inhabitants:</strong>Ramshorn snails</p>
 
-<!-- [View tank details →](/tanks/snail-tank) -->
+  <!-- <a href="/tanks/snail-tank">View tank details →</a> -->
+</div>
 
-{: .tank-card }
+<div class="tank-card">
+  <h3>🌱 Plant Tank</h3>
 
-### 🐠 Plant Tank
-**Type:** Extra plants + snails  
-**Volume:** 10 gallons  
-**Inhabitants:** Ramshorn snails  
+  <p><strong>Type:</strong>Extra plants</p>
+  <p><strong>Volume:</strong>10 gallons</p>
+  <p><strong>Inhabitants:</strong>Ramshorn snails</p>
 
-<!-- [View tank details →](/tanks/plant-tank) -->
+  <!-- <a href="/tanks/plant-tank">View tank details →</a> -->
+</div>
 
-{: .tank-card }
+<div class = "tank-card">
+<h3>📝 Notes & Observations</h3>
+<p>Over time, I’ll be adding write-ups on tank maintenance, lessons learned, plant growth, and species-specific notes.</p>
+</div>
 
-## Notes & Observations
 
-Over time, I’ll be adding write-ups on tank maintenance, lessons learned, plant growth, and species-specific notes.
+
