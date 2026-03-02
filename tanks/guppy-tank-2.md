@@ -4,6 +4,14 @@ title: Guppy Tank 1
 subtitle: Guppy Habitat
 ---
 
+<!-- ## Images -->
+
+![Tank Overview](/assets/images/guppy-tank-2.jpg)
+*Full tank view*  
+
+<!-- ![Basking Area](/assets/images/turtle-tank-1-basking.jpg)  
+*Preferred basking spot* -->
+
 ## Setup
 
 - **Tank Size:** 20 gallons  
@@ -30,13 +38,5 @@ subtitle: Guppy Habitat
 - Established: 2022
 - Water change schedule: 50% bi-weekly  
 - All current residents originated from Guppy Tank #1.
-
-<!-- ## Images -->
-
-![Tank Overview](/assets/images/guppy-tank-2.jpg)
-*Full tank view*  
-
-<!-- ![Basking Area](/assets/images/turtle-tank-1-basking.jpg)  
-*Preferred basking spot* -->
 
 ---
