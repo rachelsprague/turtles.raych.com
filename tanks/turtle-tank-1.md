@@ -7,7 +7,7 @@ body_class: default-page
 
 <!-- ## Images -->
 
-![Tank Overview](/assets/images/turtle-tank-1-overview.jpg)  
+![Tank Overview](/assets/images/tanks/turtle-tank-1-overview.jpg)  
 *Full tank view*  
 
 <!-- ![Basking Area](/assets/images/turtle-tank-1-basking.jpg)  

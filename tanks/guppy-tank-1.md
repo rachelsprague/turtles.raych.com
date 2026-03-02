@@ -6,7 +6,7 @@ subtitle: Guppy Habitat
 
 <!-- ## Images -->
 
-![Tank Overview](/assets/images/guppy-tank-1.jpg)  
+![Tank Overview](/assets/images/tanks/guppy-tank-1.jpg)  
 *Full tank view*  
 
 <!-- ![Basking Area](/assets/images/turtle-tank-1-basking.jpg)  
