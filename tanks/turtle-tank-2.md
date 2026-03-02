@@ -6,7 +6,7 @@ subtitle: Red-Eared Slider Habitat
 
 <!-- ## Images -->
 
-![Tank Overview](/assets/images/tanks/turtle-tank-1-overview.jpg)  
+![Tank Overview](/assets/images/tanks/turtle-tank-1.jpg)  
 *Full tank view*  
 
 <!-- ![Basking Area](/assets/images/turtle-tank-1-basking.jpg)  
