@@ -15,8 +15,8 @@ subtitle: Snail Habitat
 ## Setup
 
 - **Tank Size:** 5 gallons  
-<!--  - **Substrate:** Fluval Stratum + gravel
-- **Lighting:** NICREW ClassicLED aquarium light
+- **Substrate:** Gravel
+<!--- **Lighting:** NICREW ClassicLED aquarium light
 - **Heating:** Heater (original to tank)
 - **Filtration:** Sponge filter with adjustable air stone -->
 - **Air:** Adjustable air stone powered by a shared **Tetra 20–40 gallon air pump** with an air manifold.
