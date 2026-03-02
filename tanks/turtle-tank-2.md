@@ -4,6 +4,14 @@ title: Turtle Tank 2
 subtitle: Red-Eared Slider Habitat
 ---
 
+<!-- ## Images -->
+
+![Tank Overview](/assets/images/turtle-tank-1-overview.jpg)  
+*Full tank view*  
+
+<!-- ![Basking Area](/assets/images/turtle-tank-1-basking.jpg)  
+*Preferred basking spot* -->
+
 ## Setup
 
 - **Tank Size:** 75 gallons  
@@ -33,11 +41,3 @@ subtitle: Red-Eared Slider Habitat
 <!-- - Special observations: Likes basking near the sunset; most active at mid-day   -->
 <!-- - Future improvements: Consider adding additional floating plants for shade   -->
 - After 17–18 years of cohabitation, some aggression developed and the turtles needed to be separated—resulting in a second full turtle setup.
-
-<!-- ## Images
-
-![Tank Overview](/assets/images/turtle-tank-1-overview.jpg)  
-*Full tank view*  
-
-![Basking Area](/assets/images/turtle-tank-1-basking.jpg)  
-*Preferred basking spot* -->

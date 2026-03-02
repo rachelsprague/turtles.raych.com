@@ -10,7 +10,7 @@ Each tank has its own ecosystem.
 ## Tank Overview
 
 <div class="tank-card">
-  <!-- <img src="/assets/images/tanks/turtle-tank-1-thumb.jpg" alt="Turtle Tank 1 – 100 gallon red-eared slider habitat" class="tank-thumb"/> -->
+  <img src="/assets/images/tanks/turtle-tank-1-thumb.jpg" alt="Turtle Tank 1 – 100 gallon red-eared slider habitat" class="tank-thumb"/>
 
   <h3>🐢 Turtle Tank #1</h3>
 
@@ -23,7 +23,7 @@ Each tank has its own ecosystem.
 
 <div class="tank-card">
   <h3>🐢 Turtle Tank #2</h3>
-  <!-- <img src="/assets/images/tanks/turtle-tank-2-thumb.jpg" alt="Turtle Tank 2 – 75 gallon red-eared slider habitat" class="tank-thumb"/> -->
+  <img src="/assets/images/tanks/turtle-tank-2-thumb.jpg" alt="Turtle Tank 2 – 75 gallon red-eared slider habitat" class="tank-thumb"/>
 
   <p><strong>Type:</strong> Freshwater turtle habitat</p>
   <p><strong>Volume:</strong> 75 gallons</p>
