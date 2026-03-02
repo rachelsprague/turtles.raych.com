@@ -22,8 +22,9 @@ Each tank has its own ecosystem.
 </div>
 
 <div class="tank-card">
-  <h3>🐢 Turtle Tank #2</h3>
   <img src="/assets/images/tanks/turtle-tank-2-thumb.jpg" alt="Turtle Tank 2 – 75 gallon red-eared slider habitat" class="tank-thumb"/>
+  
+  <h3>🐢 Turtle Tank #2</h3>
 
   <p><strong>Type:</strong> Freshwater turtle habitat</p>
   <p><strong>Volume:</strong> 75 gallons</p>
@@ -33,8 +34,10 @@ Each tank has its own ecosystem.
 </div>
 
 <div class="tank-card">
-  <h3>🐢 Guppy Tank #1</h3>
   <img src="/assets/images/tanks/guppy-tank-1-thumb.jpg" alt="Guppy Tank 1 – 20 gallon guppy fish habitat" class="tank-thumb"/>
+
+  <h3>🐢 Guppy Tank #1</h3>
+
   <p><strong>Type:</strong> Heavily planted community tank</p>
   <p><strong>Volume:</strong> 20 gallons</p>
   <p><strong>Inhabitants:</strong> Guppies, snails</p>
@@ -43,8 +46,9 @@ Each tank has its own ecosystem.
 </div>
 
 <div class="tank-card">
-  <h3>🐢 Guppy Tank #2</h3>
   <img src="/assets/images/tanks/guppy-tank-2-thumb.jpg" alt="Guppy Tank 2 – 20 gallon guppy fish habitat" class="tank-thumb"/>
+  
+  <h3>🐢 Guppy Tank #2</h3>
 
   <p><strong>Type:</strong> Heavily planted community tank</p>
   <p><strong>Volume:</strong> 20 gallons</p>
@@ -54,8 +58,9 @@ Each tank has its own ecosystem.
 </div>
 
 <div class="tank-card">
-  <h3>🐌 Snail Tank</h3>
   <!-- <img src="/assets/images/tanks/snail-tank-thumb.jpg" alt="Snail Tank – 5 gallon snail habitat" class="tank-thumb"/> -->
+  
+  <h3>🐌 Snail Tank</h3>
 
   <p><strong>Type:</strong> Extra plants + snails</p>
   <p><strong>Volume:</strong> 5 gallons</p>
@@ -65,8 +70,9 @@ Each tank has its own ecosystem.
 </div>
 
 <div class="tank-card">
-  <h3>🌱 Plant Tank</h3>
   <!-- <img src="/assets/images/tanks/plant-tank-thumb.jpg" alt="Snail Tank – 10 gallon plant habitat" class="tank-thumb"/> -->
+  
+  <h3>🌱 Plant Tank</h3>
 
   <p><strong>Type:</strong> Extra plants</p>
   <p><strong>Volume:</strong> 10 gallons</p>
