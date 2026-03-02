@@ -319,3 +319,82 @@ body.default-page {
   transform: scale(1.01);
   transition: transform 0.2s ease;
 }
+
+/* ================================
+   Site Navigation
+   ================================ */
+
+.site-nav {
+  background: #111;
+  padding: 0.75rem 2rem;
+  margin: -2rem -2rem 2rem -2rem; /* cancel body padding */
+}
+
+.nav-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Links (desktop default) */
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #fff;
+}
+
+/* Hamburger button */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+/* ================================
+   Mobile styles
+   ================================ */
+
+@media (max-width: 768px) {
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -23,7 +23,7 @@ subtitle: Snail Habitat
 
 ## Plants & Decorations
 
-- **Floating plants:** Duckweed  
+- **Floating plants:** Duckweed, Frogbit
 - **Submerged plants:** Java Moss, Vallisneria
 - **Hardscape:** Driftwood, spare sponge filters
 

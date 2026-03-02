@@ -20,6 +20,24 @@
   </head>
 
   <body class="{{ page.body_class }}">
+
+    <nav class="site-nav">
+      <div class="nav-inner">
+        <a href="/" class="nav-logo">Turtle Cove</a>
+
+        <button class="nav-toggle" aria-label="Toggle menu">
+          ☰
+        </button>
+
+        <div class="nav-links">
+          <a href="/">Home</a>
+          <a href="/tanks/">Tanks</a>
+          <!-- <a href="/animals/">Animals</a> -->
+          <!-- <a href="/about/">About</a> -->
+        </div>
+      </div>
+    </nav>
+
     <main class="page-container">
       {% if page.title %}
         <header class="page-header">
@@ -34,5 +52,15 @@
         {{ content }}
       </article>
     </main>
+
+    <script>
+      const toggle = document.querySelector('.nav-toggle');
+      const links = document.querySelector('.nav-links');
+
+      toggle.addEventListener('click', () => {
+        links.classList.toggle('open');
+      });
+    </script>
+
   </body>
 </html>
