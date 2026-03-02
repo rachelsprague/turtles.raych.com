@@ -15,7 +15,7 @@ subtitle: Snail Habitat
 ## Setup
 
 - **Tank Size:** 5 gallons  
-<!-- - **Substrate:** Fluval Stratum + gravel
+<!--  - **Substrate:** Fluval Stratum + gravel
 - **Lighting:** NICREW ClassicLED aquarium light
 - **Heating:** Heater (original to tank)
 - **Filtration:** Sponge filter with adjustable air stone -->
@@ -29,7 +29,7 @@ subtitle: Snail Habitat
 
 ## Inhabitants
 
-- **Ramshorn Snails:** 
+- Ramshorn Snails:
 
 ## Notes & History
 

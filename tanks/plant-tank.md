@@ -29,7 +29,7 @@ title: Plant Tank
 
 ## Inhabitants
 
-- **Ramshorn Snails:** 
+- Ramshorn Snails:
 
 ## Notes & History
 
