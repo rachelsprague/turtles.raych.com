@@ -65,7 +65,7 @@ I currently maintain six aquariums, ranging from plant-only tanks to large turtl
   <p><strong>Volume:</strong> 5 gallons</p>
   <p><strong>Inhabitants:</strong> Ramshorn snails</p>
 
-  <!-- <a href="/tanks/snail-tank">View tank details →</a> -->
+  <a href="/tanks/snail-tank">View tank details →</a>
 </div>
 
 <div class="tank-card">
@@ -77,7 +77,7 @@ I currently maintain six aquariums, ranging from plant-only tanks to large turtl
   <p><strong>Volume:</strong> 10 gallons</p>
   <p><strong>Inhabitants:</strong> Ramshorn snails</p>
 
-  <!-- <a href="/tanks/plant-tank">View tank details →</a> -->
+  <a href="/tanks/plant-tank">View tank details →</a>
 </div>
 
 <div class = "tank-card">
