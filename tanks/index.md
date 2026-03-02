@@ -57,7 +57,7 @@ I currently maintain six aquariums, ranging from plant-only tanks to large turtl
 </div>
 
 <div class="tank-card">
-  <!-- <img src="/assets/images/tanks/snail-tank-thumb.jpg" alt="Snail Tank – 5 gallon snail habitat" class="tank-thumb"/> -->
+  <img src="/assets/images/tanks/snail-tank-thumb.jpg" alt="Snail Tank – 5 gallon snail habitat" class="tank-thumb"/>
   
   <h3>🐌 Snail Tank</h3>
 
@@ -69,7 +69,7 @@ I currently maintain six aquariums, ranging from plant-only tanks to large turtl
 </div>
 
 <div class="tank-card">
-  <!-- <img src="/assets/images/tanks/plant-tank-thumb.jpg" alt="Snail Tank – 10 gallon plant habitat" class="tank-thumb"/> -->
+  <img src="/assets/images/tanks/plant-tank-thumb.jpg" alt="Snail Tank – 10 gallon plant habitat" class="tank-thumb"/>
   
   <h3>🌱 Plant Tank</h3>
 
