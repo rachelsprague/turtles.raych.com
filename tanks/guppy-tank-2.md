@@ -31,12 +31,12 @@ subtitle: Guppy Habitat
 - Water change schedule: 50% bi-weekly  
 - All current residents originated from Guppy Tank #1.
 
-<!-- ## Images
+<!-- ## Images -->
 
-![Tank Overview](/assets/images/turtle-tank-1-overview.jpg)  
+![Tank Overview](/assets/images/guppy-tank-2.jpg)
 *Full tank view*  
 
-![Basking Area](/assets/images/turtle-tank-1-basking.jpg)  
+<!-- ![Basking Area](/assets/images/turtle-tank-1-basking.jpg)  
 *Preferred basking spot* -->
 
 ---
