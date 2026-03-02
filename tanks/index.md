@@ -1,11 +1,10 @@
 ---
 layout: default
 title: Aquariums & Tanks
-subtitle: Six planted tanks, turtles, guppies, and invertebrates
+<!-- subtitle: Six planted tanks, turtles, guppies, and invertebrates -->
 ---
 
 I currently maintain six aquariums, ranging from plant-only tanks to large turtle setups.  
-Each tank has its own ecosystem.
 
 ## Tank Overview
 
