@@ -304,3 +304,18 @@ body.default-page {
     padding: 2rem;
   }
 }
+
+/* Tank thumbnails */
+.tank-thumb {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.tank-card:hover .tank-thumb {
+  transform: scale(1.01);
+  transition: transform 0.2s ease;
+}
