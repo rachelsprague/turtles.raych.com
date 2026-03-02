@@ -9,13 +9,15 @@ Each tank has its own ecosystem.
 
 ## Tank Overview
 
-{: .tank-card }
-### 🐢 Turtle Tank #1
-**Type:** Freshwater turtle habitat  
-**Volume:** 100 gallons  
-**Inhabitants:** 2 Red-eared sliders  
+<div class="tank-card">
+  <h3>🐢 Turtle Tank #1</h3>
 
-[View tank details →](/tanks/turtle-tank-1)
+  <p><strong>Type:</strong> Freshwater turtle habitat</p>
+  <p><strong>Volume:</strong> 100 gallons</p>
+  <p><strong>Inhabitants:</strong> 2 Red-eared sliders</p>
+
+  <a href="/tanks/turtle-tank-1">View tank details →</a>
+</div>
 
 {: .tank-card }
 

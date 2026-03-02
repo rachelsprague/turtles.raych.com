@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Guppy Tank 1
+title: Guppy Tank 2
 subtitle: Guppy Habitat
 ---
 
