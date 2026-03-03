@@ -6,7 +6,7 @@ title: Aquariums
 
 6 aquariums. 3 turtles. Lots of guppies. 1 me. 
 
-<!-- ## Aquariums ->
+<!-- ## Aquariums -->
 
 <div class="tank-card">
   <img src="/assets/images/tanks/turtle-tank-1-thumb.jpg" alt="Turtle Tank 1 – 100 gallon red-eared slider habitat" class="tank-thumb"/>
