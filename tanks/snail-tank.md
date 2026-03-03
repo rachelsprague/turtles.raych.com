@@ -16,7 +16,7 @@ subtitle: Snail Habitat
 
 - **Tank Size:** 5 gallons  
 - **Substrate:** Gravel
-<!--- **Lighting:** NICREW ClassicLED aquarium light
+<!-- **Lighting:** NICREW ClassicLED aquarium light
 - **Heating:** Heater (original to tank)
 - **Filtration:** Sponge filter with adjustable air stone -->
 - **Air:** Adjustable air stone powered by a shared **Tetra 20–40 gallon air pump** with an air manifold.
@@ -29,12 +29,13 @@ subtitle: Snail Habitat
 
 ## Inhabitants
 
-- Ramshorn Snails:
+- Ramshorn Snails
 
 ## Notes & History
 
-<!-- - Established: 2021
-- Water change schedule: 50% bi-weekly  
-- This tank has been running for **4.5 years** and is home to multiple generations of guppies. I inherited it from the nephew of a friend who was leaving for college. The Anubias plant, gravel, heater, and guppies are all original to the setup. I have **never purchased a guppy**—every fish has been born here. -->
+- **Established:** 2021  
+- **Water change schedule:** 50% bi-weekly  
+
+This was technically my first fish tank. I originally set it up while preparing for my first fish, but it quickly became home to my first aquatic plants — and, inevitably, the hitchhiker snails that came with them.
 
 ---

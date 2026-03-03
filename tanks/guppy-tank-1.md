@@ -29,7 +29,7 @@ subtitle: Guppy Habitat
 
 ## Inhabitants
 
-- **Guppies:** 
+- **Guppies** 
 - **Tank Mates:** Ramshorn snails
 - **Feeding:** Aquarium Co-op Easy Fry Food
 
@@ -37,6 +37,6 @@ subtitle: Guppy Habitat
 
 - Established: 2021
 - Water change schedule: 50% bi-weekly  
-- This tank has been running for **4.5 years** and is home to multiple generations of guppies. I inherited it from the nephew of a friend who was leaving for college. The Anubias plant, gravel, heater, and guppies are all original to the setup. I have **never purchased a guppy**—every fish has been born here.
+- This tank is home to multiple generations of guppies. I inherited it from the nephew of a friend who was leaving for college. The Anubias plant, gravel, heater, and guppies are all original to the setup. I have **never purchased a guppy**—every fish has been born here.
 
 ---
