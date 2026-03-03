@@ -4,9 +4,9 @@ title: Aquariums & Tanks
 <!-- subtitle: Six planted tanks, turtles, guppies, and invertebrates -->
 ---
 
-I currently maintain six aquariums, ranging from plant-only tanks to large turtle setups.  
+6 aquariums. 3 turtles. Lots of guppies. 1 me. 
 
-## Tank Overview
+## Aquariums
 
 <div class="tank-card">
   <img src="/assets/images/tanks/turtle-tank-1-thumb.jpg" alt="Turtle Tank 1 – 100 gallon red-eared slider habitat" class="tank-thumb"/>
