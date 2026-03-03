@@ -4,7 +4,7 @@ title: Aquariums
 <!-- subtitle: Six planted tanks, turtles, guppies, and invertebrates -->
 ---
 
-6 aquariums. 3 turtles. Lots of guppies. 1 me. 
+6 aquariums. 3 turtles. Lots of guppies.
 
 <!-- ## Aquariums -->
 
