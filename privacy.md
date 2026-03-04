@@ -1,3 +1,8 @@
+---
+layout: basic
+title: Privacy Policy
+---
+
 # Privacy Policy – Raych's Turtle Cove
 
 Effective Date: [Insert Date]
