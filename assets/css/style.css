@@ -398,3 +398,26 @@ body.default-page {
     align-items: flex-start;
   }
 }
+
+/* ================================
+   Footer styling
+   ================================ */
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 3rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  background: transparent; /* keeps background consistent with page */
+}
+
+footer a {
+  color: #555;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+footer a:hover {
+  color: #222;
+}
