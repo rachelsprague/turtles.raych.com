@@ -6,10 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JTQC9ZT68S"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JTQC9ZT68S');
+</script>
 </head>
 <body class="{{ page.body_class }}">
   <main>
     {{ content }}
   </main>
+
+    <footer style="text-align:center; margin-top:3rem; font-size:0.9rem; color:#666;">
+      © 2026 Raych. All rights reserved.
+    </footer>
+    
 </body>
 </html>

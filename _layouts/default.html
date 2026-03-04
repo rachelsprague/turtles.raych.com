@@ -17,6 +17,16 @@
       <link rel="stylesheet" href="{{ css | relative_url }}" />
       {% endfor %}
     {% endif %}
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JTQC9ZT68S"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-JTQC9ZT68S');
+    </script>
   </head>
 
   <body class="{{ page.body_class }}">
@@ -62,5 +72,9 @@
       });
     </script>
 
+    <footer style="text-align:center; margin-top:3rem; font-size:0.9rem; color:#666;">
+      © 2026 Raych. All rights reserved.
+    </footer>
+    
   </body>
 </html>
