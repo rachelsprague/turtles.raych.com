@@ -18,8 +18,37 @@
       {% endfor %}
     {% endif %}
 
-    <!-- Google tag (gtag.js) -->
+<!-- Google tag (gtag.js) -->
     {% if jekyll.environment == "production" %}
+    <script>
+    /* ---------------------------------
+      Raych personal-traffic detection
+    ---------------------------------- */
+
+    // change this for each site
+    const GA_ID = "G-7E6GMBJCZM";
+
+    /* check if this browser is marked as Raych */
+    const isRaych = document.cookie.includes("raychVisitor=true");
+
+    /* OPTIONAL: disable GA entirely for you */
+    if (isRaych) {
+      window['ga-disable-' + GA_ID] = true;
+    }
+
+    /* if not disabling, at least tag yourself */
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+
+    if (isRaych) {
+      gtag('set', {
+        'user_properties': {
+          visitor_type: 'owner'
+        }
+      });
+    }
+    </script>
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7E6GMBJCZM"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
