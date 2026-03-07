@@ -26,6 +26,7 @@ body_class: default-page
 
 - Plants: None. The turtles eat everything
 - Mopani wood
+- 9" Terracotta Azalea Pot (9"W x 6"H) – Unglazed natural clay
 - Basking platform: DIY above-tank PVC platform
 
 ## Inhabitants

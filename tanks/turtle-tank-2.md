@@ -26,6 +26,7 @@ subtitle: Red-Eared Slider Habitat
 
 - Plants: None. She eats everything
 - Basking platform: DIY above-tank PVC platform
+- 9" Terracotta Azalea Pot (9"W x 6"H) – Unglazed natural clay
 - Mopani wood
 
 ## Inhabitants
