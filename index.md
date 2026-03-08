@@ -43,7 +43,6 @@ body_class: turtles-page
 
 </div>
 
-
 <script>
 async function loadBlueskyMedia() {
   const handle = "turtles.raych.com";
@@ -60,21 +59,22 @@ async function loadBlueskyMedia() {
     let postUrl = null;
 
     for (const item of data.feed) {
+      // Skip reposts (check for 'reason' property)
+      if (item.reason) continue;
+
       const embed = item.post.embed;
 
-      // Pick the first image post
+      // Pick the first original image post
       if (!photoPost && embed?.images?.length) {
         photoPost = embed.images[0];
 
-        // Build clickable post URL
         postUrl = `https://bsky.app/profile/${handle}/post/${item.post.uri.split('/').pop()}`;
       }
 
-      // Pick the first video post
+      // Pick the first original video post
       if (!videoPost && embed?.video) {
         videoPost = embed.video;
 
-        // Build clickable post URL for video (optional)
         videoPost.url = `https://bsky.app/profile/${handle}/post/${item.post.uri.split('/').pop()}`;
       }
 
@@ -92,7 +92,7 @@ async function loadBlueskyMedia() {
         "<p>No recent photo found.</p>";
     }
 
-    // Display video
+    // Display clickable video
     if (videoPost) {
       document.getElementById("latest-video").innerHTML =
         `<a href="${videoPost.url}" target="_blank" rel="noopener">
