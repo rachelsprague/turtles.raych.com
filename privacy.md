@@ -5,7 +5,7 @@ title: Privacy Policy
 
 # Privacy Policy – Raych's Turtle Cove
 
-Effective Date: [Insert Date]
+Effective Date: 2026-03-08
 
 Raych's Turtle Cove (“we,” “our,” or “us”) respects your privacy. This policy explains how we collect, use, and protect information when you visit [https://turtles.raych.com](https://turtles.raych.com).
 
