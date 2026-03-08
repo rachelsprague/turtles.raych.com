@@ -49,7 +49,7 @@ async function loadBlueskyMedia() {
 
   try {
     const res = await fetch(
-      `https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=${handle}&filter=posts_with_media&limit=50`
+      `https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=${encodeURIComponent(handle)}&filter=posts_with_media&limit=50`
     );
 
     const data = await res.json();
@@ -57,53 +57,93 @@ async function loadBlueskyMedia() {
     let latestPhoto = null;
     let latestVideo = null;
 
-    for (const item of data.feed) {
+    for (const item of (data.feed || [])) {
       const post = item.post;
+      if (!post) continue;
+
       const embed = post.embed;
 
-      // Skip reposts – check that reason exists and type matches exactly
+      // Skip reposts
       if (post.reason && post.reason.$type === "app.bsky.feed.defs#reasonRepost") {
         continue;
       }
 
-      // PHOTO: posts with image embed
-      if (!latestPhoto && embed && embed.$type === "app.bsky.embed.images#view" && embed.images?.length > 0) {
+      // Skip if this is *only* quoting someone else without your own media
+      if (!embed) continue;
+
+      // PHOTO: images embed
+      if (
+        !latestPhoto &&
+        embed.$type === "app.bsky.embed.images#view" &&
+        Array.isArray(embed.images) &&
+        embed.images.length > 0
+      ) {
+        const img = embed.images[0];
         latestPhoto = {
-          url: embed.images[0].fullsize || embed.images[0].thumb,
-          // post.uri is like "at://did/app.bsky.feed.post/3kxxxxx", we only want the rkey (last segment)
+          url: img.fullsize || img.thumb,
           rkey: post.uri.split("/").pop()
         };
       }
 
-      // VIDEO: Bluesky videos currently come as external or record embeds with a blob URL,
-      // so check for an external or record embed and look for a .mp4-like URL.
-      if (!latestVideo && embed) {
-        // external card with a video URL
-        if (embed.$type === "app.bsky.embed.external#view" && embed.external?.uri) {
-          const url = embed.external.uri;
-          if (url.match(/\.(mp4|mov|webm|mpeg)(\?|$)/i)) {
+      // VIDEO: check a few known shapes
+
+      // 1) Native Bluesky video embed
+      if (
+        !latestVideo &&
+        (embed.$type === "app.bsky.embed.video#view" || embed.$type === "app.bsky.embed.video#viewExternal") &&
+        embed.playlist
+      ) {
+        latestVideo = {
+          url: embed.playlist,      // HLS playlist
+          rkey: post.uri.split("/").pop(),
+          thumb: embed.thumbnail || ""
+        };
+      }
+
+      // 2) External link embed with video URL (YouTube, direct .mp4, etc.)
+      if (!latestVideo && embed.$type === "app.bsky.embed.external#view" && embed.external?.uri) {
+        const url = embed.external.uri;
+        if (/\.(mp4|mov|webm|mpeg)(\?|$)/i.test(url)) {
+          latestVideo = {
+            url,
+            rkey: post.uri.split("/").pop(),
+            thumb: (embed.external.thumb && (embed.external.thumb.fullsize || embed.external.thumb.thumb)) || ""
+          };
+        }
+      }
+
+      // 3) record-with-media (quote + media)
+      if (!latestVideo && embed.$type === "app.bsky.embed.recordWithMedia#view" && embed.media) {
+        const media = embed.media;
+
+        // media is images
+        if (media.$type === "app.bsky.embed.images#view" && Array.isArray(media.images)) {
+          // if you don't want videos from quoted media, skip this
+        }
+
+        // media is external with video URL
+        if (media.$type === "app.bsky.embed.external#view" && media.external?.uri) {
+          const url = media.external.uri;
+          if (/\.(mp4|mov|webm|mpeg)(\?|$)/i.test(url)) {
             latestVideo = {
               url,
               rkey: post.uri.split("/").pop(),
-              thumb: embed.external.thumb?.fullsize || embed.external.thumb?.thumb || ""
+              thumb: (media.external.thumb && (media.external.thumb.fullsize || media.external.thumb.thumb)) || ""
             };
           }
         }
 
-        // record-with-media case (quote + media)
-        if (!latestVideo && embed.$type === "app.bsky.embed.recordWithMedia#view") {
-          const media = embed.media;
-          // media can itself be an images or external embed etc.
-          if (media?.$type === "app.bsky.embed.external#view" && media.external?.uri) {
-            const url = media.external.uri;
-            if (url.match(/\.(mp4|mov|webm|mpeg)(\?|$)/i)) {
-              latestVideo = {
-                url,
-                rkey: post.uri.split("/").pop(),
-                thumb: media.external.thumb?.fullsize || media.external.thumb?.thumb || ""
-              };
-            }
-          }
+        // media is native video
+        if (
+          !latestVideo &&
+          (media.$type === "app.bsky.embed.video#view" || media.$type === "app.bsky.embed.video#viewExternal") &&
+          media.playlist
+        ) {
+          latestVideo = {
+            url: media.playlist,
+            rkey: post.uri.split("/").pop(),
+            thumb: media.thumbnail || ""
+          };
         }
       }
 
@@ -111,40 +151,46 @@ async function loadBlueskyMedia() {
     }
 
     // DISPLAY PHOTO
-    if (latestPhoto) {
-      document.getElementById("latest-photo").innerHTML = `
+    const photoEl = document.getElementById("latest-photo");
+    if (latestPhoto && photoEl) {
+      photoEl.innerHTML = `
         <a href="https://bsky.app/profile/${handle}/post/${latestPhoto.rkey}" target="_blank" rel="noopener">
           <img src="${latestPhoto.url}" style="max-width:100%;border-radius:12px;">
         </a>
       `;
-    } else {
-      document.getElementById("latest-photo").textContent = "No recent photo.";
+    } else if (photoEl) {
+      photoEl.textContent = "No recent photo.";
     }
 
     // DISPLAY VIDEO
-    if (latestVideo) {
-      document.getElementById("latest-video").innerHTML = `
+    const videoEl = document.getElementById("latest-video");
+    if (latestVideo && videoEl) {
+      // Use video tag; HLS .m3u8 may not play everywhere but this is the simplest
+      videoEl.innerHTML = `
         <a href="https://bsky.app/profile/${handle}/post/${latestVideo.rkey}" target="_blank" rel="noopener">
           <video controls style="max-width:100%;border-radius:12px;" ${latestVideo.thumb ? `poster="${latestVideo.thumb}"` : ""}>
-            <source src="${latestVideo.url}" type="video/mp4">
+            <source src="${latestVideo.url}">
             Your browser does not support the video tag.
           </video>
         </a>
       `;
-    } else {
-      document.getElementById("latest-video").textContent = "No recent video.";
+    } else if (videoEl) {
+      videoEl.textContent = "No recent video.";
     }
 
   } catch (err) {
     console.error("Error loading Bluesky media:", err);
-    document.getElementById("latest-photo").textContent = "Failed to load photo.";
-    document.getElementById("latest-video").textContent = "Failed to load video.";
+    const photoEl = document.getElementById("latest-photo");
+    const videoEl = document.getElementById("latest-video");
+    if (photoEl) photoEl.textContent = "Failed to load photo.";
+    if (videoEl) videoEl.textContent = "Failed to load video.";
   }
 }
 
 // Run it
 loadBlueskyMedia();
 </script>
+
 
   
   <!-- Hub text -->
