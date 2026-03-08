@@ -54,6 +54,8 @@ async function loadBlueskyMedia() {
 
     const data = await res.json();
 
+    console.log(data.feed);
+
     let photoHtml = "<p>No recent photo.</p>";
     let videoHtml = "<p>No recent video.</p>";
 
