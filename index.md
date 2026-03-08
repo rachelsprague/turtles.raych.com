@@ -34,10 +34,10 @@ body_class: turtles-page
   <a class="btn btn--primary btn--large btn--block" href="http://www.raych.com/makes/" target="_blank" rel="noopener">Raych Makes</a>
 
   <section class="latest">
-  <h2>Latest Turtle Photo</h2>
+  <h2>Latest Photo</h2>
   <div id="latest-photo"></div>
 
-  <h2>Latest Turtle Video</h2>
+  <h2>Latest Video</h2>
   <div id="latest-video"></div>
 </section>
 
@@ -65,36 +65,45 @@ async function loadBlueskyMedia() {
 
     // pick first image post
     if (!photoPost && embed?.images?.length) {
-      photoPost = embed.images[0];
+      photoPost = {
+        ...embed.images[0],
+        url: `https://bsky.app/profile/${handle}/post/${item.post.cid}` // link to post
+      };
     }
 
     // pick first video post
-    if (!videoPost && embed?.record?.text?.includes('video')) {
-      // try to find the video src in attachments
-      const videoAttachment = embed?.media?.[0];
-      if (videoAttachment?.type === 'video') {
-        videoPost = videoAttachment;
+    if (!videoPost && embed?.media?.length) {
+      const videoAttachment = embed.media.find(m => m.type === 'video');
+      if (videoAttachment) {
+        videoPost = {
+          ...videoAttachment,
+          url: `https://bsky.app/profile/${handle}/post/${item.post.cid}` // link to post
+        };
       }
     }
 
     if (photoPost && videoPost) break;
   }
 
-  // show photo with max width
+  // display clickable photo
   if (photoPost) {
-    const url = photoPost.thumb || photoPost.fullsize; // thumb if available
+    const thumb = photoPost.thumb || photoPost.fullsize;
     document.getElementById("latest-photo").innerHTML =
-      `<img src="${url}" style="max-width:100%;border-radius:12px;">`;
+      `<a href="${photoPost.url}" target="_blank" rel="noopener">
+         <img src="${thumb}" style="max-width:100%;border-radius:12px;">
+       </a>`;
   }
 
-  // show video (if exists)
+  // display clickable video
   if (videoPost) {
     const videoUrl = videoPost.url || videoPost.playlist;
     if (videoUrl) {
       document.getElementById("latest-video").innerHTML =
-        `<video controls style="max-width:100%;border-radius:12px;">
-           <source src="${videoUrl}" type="video/mp4">
-         </video>`;
+        `<a href="${videoPost.url}" target="_blank" rel="noopener">
+           <video controls style="max-width:100%;border-radius:12px;">
+             <source src="${videoUrl}" type="video/mp4">
+           </video>
+         </a>`;
     }
   }
 }
