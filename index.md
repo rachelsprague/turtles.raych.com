@@ -46,42 +46,56 @@ body_class: turtles-page
 
 <script>
 async function loadBlueskyMedia() {
-
   const handle = "turtles.raych.com";
 
   const res = await fetch(
-    `https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=${handle}&limit=20`
+    `https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=${handle}&limit=50`
   );
-
   const data = await res.json();
 
   let photoPost = null;
   let videoPost = null;
 
   for (const item of data.feed) {
+
+    // skip reposts
+    if (item.reason) continue;
+
     const embed = item.post.embed;
 
-    if (!photoPost && embed?.images) {
+    // pick first image post
+    if (!photoPost && embed?.images?.length) {
       photoPost = embed.images[0];
     }
 
-    if (!videoPost && embed?.video) {
-      videoPost = embed.video;
+    // pick first video post
+    if (!videoPost && embed?.record?.text?.includes('video')) {
+      // try to find the video src in attachments
+      const videoAttachment = embed?.media?.[0];
+      if (videoAttachment?.type === 'video') {
+        videoPost = videoAttachment;
+      }
     }
 
     if (photoPost && videoPost) break;
   }
 
+  // show photo with max width
   if (photoPost) {
+    const url = photoPost.thumb || photoPost.fullsize; // thumb if available
     document.getElementById("latest-photo").innerHTML =
-      `<img src="${photoPost.fullsize}" style="max-width:100%;border-radius:12px;">`;
+      `<img src="${url}" style="max-width:100%;border-radius:12px;">`;
   }
 
+  // show video (if exists)
   if (videoPost) {
-    document.getElementById("latest-video").innerHTML =
-      `<video controls style="max-width:100%;border-radius:12px;">
-        <source src="${videoPost.playlist}" type="application/x-mpegURL">
-      </video>`;
+    const videoUrl = videoPost.url || videoPost.playlist;
+    if (videoUrl) {
+      document.getElementById("latest-video").innerHTML =
+        `<video controls style="max-width:100%;border-radius:12px;">
+           <source src="${videoUrl}" type="video/mp4">
+         </video>`;
+    }
   }
 }
 
