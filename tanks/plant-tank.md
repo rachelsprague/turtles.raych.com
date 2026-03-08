@@ -33,6 +33,8 @@ title: Plant Tank
 
 ## Notes & History
 
+This tank was originally set up for my first fish, **Villanelle**, an elephant ear betta who lived here from **September 2021 to October 2022**. After her passing, I kept the tank running for a while before eventually rescaping it into a **plant grow-out tank**.
+
 <!-- - Established: 2021
 - Water change schedule: 50% bi-weekly  
 - This tank has been running for **4.5 years** and is home to multiple generations of guppies. I inherited it from the nephew of a friend who was leaving for college. The Anubias plant, gravel, heater, and guppies are all original to the setup. I have **never purchased a guppy**—every fish has been born here. -->
