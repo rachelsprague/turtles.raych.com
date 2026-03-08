@@ -18,44 +18,41 @@
       {% endfor %}
     {% endif %}
 
-<!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) -->
     {% if jekyll.environment == "production" %}
     <script>
-    /* ---------------------------------
-      Raych personal-traffic detection
-    ---------------------------------- */
+      // Your GA Measurement ID
+      const GA_ID = "G-7E6GMBJCZM";
 
-    // change this for each site
-    const GA_ID = "G-7E6GMBJCZM";
+      // Detect if this is your browser (Raych)
+      // For simplicity, we check a cookie; fallback to false
+      const isRaych = document.cookie.includes("raychVisitor=true");
 
-    /* check if this browser is marked as Raych */
-    const isRaych = document.cookie.includes("raychVisitor=true");
+      // Initialize dataLayer
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
 
-    /* OPTIONAL: disable GA entirely for you */
-    if (isRaych) {
-      // window['ga-disable-' + GA_ID] = true;
-    }
-
-    /* if not disabling, at least tag yourself */
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-
-    if (isRaych) {
-      gtag('set', {
-        'user_properties': {
-          visitor_type: 'owner'
-        }
+      // Set traffic_type based on whether this is you
+      gtag('set', 'user_properties', {
+        traffic_type: isRaych ? 'owner' : 'user'
       });
-    }
+
+      // Optional: completely disable tracking for yourself
+      if (isRaych) {
+        window['ga-disable-' + GA_ID] = true; 
+      }
+
     </script>
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7E6GMBJCZM"></script>
+    <!-- Load GA -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ GA_ID }}"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'G-7E6GMBJCZM');
+      // Configure GA
+      gtag('config', '{{ GA_ID }}');
     </script>
     {% endif %}
   </head>

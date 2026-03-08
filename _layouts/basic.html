@@ -1,46 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-<!-- Google tag (gtag.js) -->
-    {% if jekyll.environment == "production" %}
-    <script>
-    /* ---------------------------------
-      Raych personal-traffic detection
-    ---------------------------------- */
-
-    // change this for each site
+    
+  <!-- Google tag (gtag.js) -->
+  {% if jekyll.environment == "production" %}
+  <script>
+    // Your GA Measurement ID
     const GA_ID = "G-7E6GMBJCZM";
 
-    /* check if this browser is marked as Raych */
+    // Detect if this is your browser (Raych)
+    // For simplicity, we check a cookie; fallback to false
     const isRaych = document.cookie.includes("raychVisitor=true");
 
-    /* OPTIONAL: disable GA entirely for you */
-    if (isRaych) {
-    //   window['ga-disable-' + GA_ID] = true;
-    }
-
-    /* if not disabling, at least tag yourself */
+    // Initialize dataLayer
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
 
+    // Set traffic_type based on whether this is you
+    gtag('set', 'user_properties', {
+      traffic_type: isRaych ? 'owner' : 'user'
+    });
+
+    // Optional: completely disable tracking for yourself
     if (isRaych) {
-      gtag('set', {
-        'user_properties': {
-          visitor_type: 'owner'
-        }
-      });
+      window['ga-disable-' + GA_ID] = true; 
     }
-    </script>
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7E6GMBJCZM"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+  </script>
 
-      gtag('config', 'G-7E6GMBJCZM');
-    </script>
-    {% endif %}
+  <!-- Load GA -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ GA_ID }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    // Configure GA
+    gtag('config', '{{ GA_ID }}');
+  </script>
+  {% endif %}
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{{ page.title }}</title>
