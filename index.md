@@ -49,7 +49,7 @@ async function loadBlueskyMedia() {
 
   try {
     const res = await fetch(
-      `https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=${handle}&limit=50`
+      `https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=${handle}&filter=posts_with_media&limit=50`
     );
 
     const data = await res.json();
@@ -61,26 +61,49 @@ async function loadBlueskyMedia() {
       const post = item.post;
       const embed = post.embed;
 
-      // Skip reposts
-      if (post?.reason?.type === " repost") continue;
+      // Skip reposts – check that reason exists and type matches exactly
+      if (post.reason && post.reason.$type === "app.bsky.feed.defs#reasonRepost") {
+        continue;
+      }
 
-      // PHOTO
-      if (!latestPhoto && embed?.images?.length > 0) {
+      // PHOTO: posts with image embed
+      if (!latestPhoto && embed && embed.$type === "app.bsky.embed.images#view" && embed.images?.length > 0) {
         latestPhoto = {
-          url: embed.images[0].fullsize,
-          postUri: post.uri
+          url: embed.images[0].fullsize || embed.images[0].thumb,
+          // post.uri is like "at://did/app.bsky.feed.post/3kxxxxx", we only want the rkey (last segment)
+          rkey: post.uri.split("/").pop()
         };
       }
 
-      // VIDEO
-      if (!latestVideo && embed?.record?.media?.length > 0) {
-        const videoMedia = embed.record.media.find(m => m.type === "video");
-        if (videoMedia) {
-          latestVideo = {
-            url: videoMedia.url,
-            postUri: post.uri,
-            thumb: videoMedia.thumb || ""
-          };
+      // VIDEO: Bluesky videos currently come as external or record embeds with a blob URL,
+      // so check for an external or record embed and look for a .mp4-like URL.
+      if (!latestVideo && embed) {
+        // external card with a video URL
+        if (embed.$type === "app.bsky.embed.external#view" && embed.external?.uri) {
+          const url = embed.external.uri;
+          if (url.match(/\.(mp4|mov|webm|mpeg)(\?|$)/i)) {
+            latestVideo = {
+              url,
+              rkey: post.uri.split("/").pop(),
+              thumb: embed.external.thumb?.fullsize || embed.external.thumb?.thumb || ""
+            };
+          }
+        }
+
+        // record-with-media case (quote + media)
+        if (!latestVideo && embed.$type === "app.bsky.embed.recordWithMedia#view") {
+          const media = embed.media;
+          // media can itself be an images or external embed etc.
+          if (media?.$type === "app.bsky.embed.external#view" && media.external?.uri) {
+            const url = media.external.uri;
+            if (url.match(/\.(mp4|mov|webm|mpeg)(\?|$)/i)) {
+              latestVideo = {
+                url,
+                rkey: post.uri.split("/").pop(),
+                thumb: media.external.thumb?.fullsize || media.external.thumb?.thumb || ""
+              };
+            }
+          }
         }
       }
 
@@ -90,7 +113,7 @@ async function loadBlueskyMedia() {
     // DISPLAY PHOTO
     if (latestPhoto) {
       document.getElementById("latest-photo").innerHTML = `
-        <a href="https://bsky.app/profile/${handle}/post/${latestPhoto.postUri}" target="_blank" rel="noopener">
+        <a href="https://bsky.app/profile/${handle}/post/${latestPhoto.rkey}" target="_blank" rel="noopener">
           <img src="${latestPhoto.url}" style="max-width:100%;border-radius:12px;">
         </a>
       `;
@@ -101,8 +124,8 @@ async function loadBlueskyMedia() {
     // DISPLAY VIDEO
     if (latestVideo) {
       document.getElementById("latest-video").innerHTML = `
-        <a href="https://bsky.app/profile/${handle}/post/${latestVideo.postUri}" target="_blank" rel="noopener">
-          <video controls style="max-width:100%;border-radius:12px;" poster="${latestVideo.thumb}">
+        <a href="https://bsky.app/profile/${handle}/post/${latestVideo.rkey}" target="_blank" rel="noopener">
+          <video controls style="max-width:100%;border-radius:12px;" ${latestVideo.thumb ? `poster="${latestVideo.thumb}"` : ""}>
             <source src="${latestVideo.url}" type="video/mp4">
             Your browser does not support the video tag.
           </video>
@@ -122,6 +145,7 @@ async function loadBlueskyMedia() {
 // Run it
 loadBlueskyMedia();
 </script>
+
   
   <!-- Hub text -->
   <!--  <p>The turtles racked up 12.6k+ followers and 300k+ likes on TikTok—but I've moved all their content off the platform. You can now follow them on Bluesky <a href="https://bsky.app/profile/turtles.raych.com">@turtles.raych.com</a>.</p>
