@@ -54,28 +54,20 @@ async function loadBlueskyMedia() {
 
     const data = await res.json();
 
-    console.log(data.feed);
-
     let photoHtml = "<p>No recent photo.</p>";
     let videoHtml = "<p>No recent video.</p>";
 
     for (const item of data.feed) {
 
-      // skip reposts
-      if (item.reason) continue;
+      if (item.reason) continue; // skip reposts
 
       const embed = item.post.embed;
-      const postId = item.post.uri.split('/').pop();
+      const postId = item.post.uri.split("/").pop();
       const postUrl = `https://bsky.app/profile/${handle}/post/${postId}`;
 
-      // ---------- PHOTO ----------
+      // PHOTO
       if (photoHtml.includes("No recent")) {
-
-        let images =
-          embed?.images ||
-          embed?.media?.images ||
-          embed?.record?.embed?.images ||
-          embed?.record?.embed?.media?.images;
+        const images = embed?.images || embed?.media?.images;
 
         if (images?.length) {
           photoHtml = `
@@ -86,19 +78,16 @@ async function loadBlueskyMedia() {
         }
       }
 
-      // ---------- VIDEO ----------
+      // VIDEO
       if (videoHtml.includes("No recent")) {
+        const video = embed?.video || embed?.media?.video;
 
-        let video =
-          embed?.video ||
-          embed?.media?.video ||
-          embed?.record?.embed?.video ||
-          embed?.record?.embed?.media?.video;
+        if (video?.cid) {
+          const thumb = `https://video.bsky.app/watch/${handle}/${video.cid}/thumbnail.jpg`;
 
-        if (video?.thumbnail) {
           videoHtml = `
             <a href="${postUrl}" target="_blank">
-              <img src="${video.thumbnail}" style="max-width:100%;border-radius:12px;">
+              <img src="${thumb}" style="max-width:100%;border-radius:12px;">
               <div style="margin-top:6px;font-size:0.9em;">▶ Watch video</div>
             </a>
           `;
@@ -112,7 +101,7 @@ async function loadBlueskyMedia() {
     document.getElementById("latest-video").innerHTML = videoHtml;
 
   } catch (err) {
-    console.error("Bluesky error:", err);
+    console.error("Bluesky load error:", err);
   }
 }
 
