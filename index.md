@@ -51,67 +51,53 @@ async function loadBlueskyMedia() {
     const res = await fetch(
       `https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=${handle}&limit=20`
     );
+
     const data = await res.json();
 
-    let photoFound = false;
-    let videoFound = false;
-
-    let photoHtml = "<p>No recent photo found.</p>";
-    let videoHtml = "<p>No recent video found.</p>";
+    let photoPost = null;
+    let videoPost = null;
 
     for (const item of data.feed) {
-      // Skip reposts
-      if (item.reason) continue;
-
       const embed = item.post.embed;
-      const postUri = item.post.uri;
-      const postUrl = `https://bsky.app/profile/${handle}/post/${postUri.split('/').pop()}`;
 
-      // Latest photo
-      if (!photoFound && embed?.images?.length) {
-        const image = embed.images[0];
-        photoHtml = `
-          <a href="${postUrl}" target="_blank" rel="noopener">
-            <img src="${image.fullsize}" style="max-width:100%;border-radius:12px;">
-          </a>
-        `;
-        photoFound = true;
+      // Skip reposts / repost content
+      if (item.post.reason) continue;
+
+      // Photo
+      if (!photoPost && embed?.images?.length) {
+        photoPost = embed.images[0];
       }
 
-      // Latest video
-      if (!videoFound && embed?.video) {
-        const video = embed.video;
-        let videoUrl = null;
-
-        if (video.playlist && video.playlist.length) {
-          videoUrl = video.playlist[0].url;
-        } else if (video.url) {
-          videoUrl = video.url;
-        }
-
-        if (videoUrl) {
-          videoHtml = `
-            <a href="${postUrl}" target="_blank" rel="noopener">
-              <video controls style="max-width:100%;border-radius:12px;">
-                <source src="${videoUrl}" type="application/x-mpegURL">
-                Your browser does not support the video tag.
-              </video>
-            </a>
-          `;
-          videoFound = true;
-        }
+      // Video
+      if (!videoPost && embed?.video) {
+        videoPost = {
+          thumbnail: embed.video.thumb,
+          postUri: item.post.uri
+        };
       }
 
-      if (photoFound && videoFound) break;
+      if (photoPost && videoPost) break;
     }
 
-    document.getElementById("latest-photo").innerHTML = photoHtml;
-    document.getElementById("latest-video").innerHTML = videoHtml;
+    // Display photo
+    if (photoPost) {
+      const photoHtml = `<a href="https://bsky.app/profile/${handle}" target="_blank">
+        <img src="${photoPost.fullsize}" style="max-width:100%;border-radius:12px;">
+      </a>`;
+      document.getElementById("latest-photo").innerHTML = photoHtml;
+    }
+
+    // Display video as clickable thumbnail
+    if (videoPost) {
+      const videoHtml = `<a href="https://bsky.app/xrpc/com.atproto.repo.getRecord?uri=${encodeURIComponent(videoPost.postUri)}" target="_blank">
+        <img src="${videoPost.thumbnail}" style="max-width:100%;border-radius:12px;">
+        <p style="text-align:center;margin-top:0.5rem;">Watch on Bluesky →</p>
+      </a>`;
+      document.getElementById("latest-video").innerHTML = videoHtml;
+    }
 
   } catch (err) {
     console.error("Error loading Bluesky media:", err);
-    document.getElementById("latest-photo").innerHTML = "<p>Error loading photo.</p>";
-    document.getElementById("latest-video").innerHTML = "<p>Error loading video.</p>";
   }
 }
 
