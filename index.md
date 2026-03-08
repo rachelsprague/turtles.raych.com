@@ -59,33 +59,43 @@ async function loadBlueskyMedia() {
 
     for (const item of data.feed) {
 
-      // Skip reposts
+      // skip reposts
       if (item.reason) continue;
 
       const embed = item.post.embed;
       const postId = item.post.uri.split('/').pop();
       const postUrl = `https://bsky.app/profile/${handle}/post/${postId}`;
 
-      // PHOTO
-      if (photoHtml.includes("No recent") && embed?.images?.length) {
-        const img = embed.images[0].fullsize;
+      // ---------- PHOTO ----------
+      if (photoHtml.includes("No recent")) {
 
-        photoHtml = `
-          <a href="${postUrl}" target="_blank" rel="noopener">
-            <img src="${img}" style="max-width:100%;border-radius:12px;">
-          </a>
-        `;
+        let images = null;
+
+        if (embed?.images) images = embed.images;
+        if (embed?.media?.images) images = embed.media.images;
+
+        if (images?.length) {
+          photoHtml = `
+            <a href="${postUrl}" target="_blank">
+              <img src="${images[0].fullsize}" style="max-width:100%;border-radius:12px;">
+            </a>
+          `;
+        }
       }
 
-      // VIDEO
-      if (videoHtml.includes("No recent") && embed?.video) {
-        const thumb = embed.video.thumbnail;
+      // ---------- VIDEO ----------
+      if (videoHtml.includes("No recent")) {
 
-        if (thumb) {
+        let video = null;
+
+        if (embed?.video) video = embed.video;
+        if (embed?.media?.video) video = embed.media.video;
+
+        if (video?.thumbnail) {
           videoHtml = `
-            <a href="${postUrl}" target="_blank" rel="noopener">
-              <img src="${thumb}" style="max-width:100%;border-radius:12px;">
-              <p style="margin-top:6px;font-size:0.9em;">▶ Watch video</p>
+            <a href="${postUrl}" target="_blank">
+              <img src="${video.thumbnail}" style="max-width:100%;border-radius:12px;">
+              <div style="font-size:0.9em;margin-top:6px;">▶ Watch video</div>
             </a>
           `;
         }
