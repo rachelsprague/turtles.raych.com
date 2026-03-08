@@ -33,10 +33,60 @@ body_class: turtles-page
   <a class="btn btn--primary btn--large btn--block" href="https://www.raych.com" target="_blank" rel="noopener">Raych</a>
   <a class="btn btn--primary btn--large btn--block" href="http://www.raych.com/makes/" target="_blank" rel="noopener">Raych Makes</a>
 
+  <section class="latest">
+  <h2>Latest Turtle Photo</h2>
+  <div id="latest-photo"></div>
+
+  <h2>Latest Turtle Video</h2>
+  <div id="latest-video"></div>
+</section>
+
 </div>
 
 
+<script>
+async function loadBlueskyMedia() {
 
+  const handle = "turtles.raych.com";
+
+  const res = await fetch(
+    `https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=${handle}&limit=20`
+  );
+
+  const data = await res.json();
+
+  let photoPost = null;
+  let videoPost = null;
+
+  for (const item of data.feed) {
+    const embed = item.post.embed;
+
+    if (!photoPost && embed?.images) {
+      photoPost = embed.images[0];
+    }
+
+    if (!videoPost && embed?.video) {
+      videoPost = embed.video;
+    }
+
+    if (photoPost && videoPost) break;
+  }
+
+  if (photoPost) {
+    document.getElementById("latest-photo").innerHTML =
+      `<img src="${photoPost.fullsize}" style="max-width:100%;border-radius:12px;">`;
+  }
+
+  if (videoPost) {
+    document.getElementById("latest-video").innerHTML =
+      `<video controls style="max-width:100%;border-radius:12px;">
+        <source src="${videoPost.playlist}" type="application/x-mpegURL">
+      </video>`;
+  }
+}
+
+loadBlueskyMedia();
+</script>
   
   <!-- Hub text -->
   <!--  <p>The turtles racked up 12.6k+ followers and 300k+ likes on TikTok—but I've moved all their content off the platform. You can now follow them on Bluesky <a href="https://bsky.app/profile/turtles.raych.com">@turtles.raych.com</a>.</p>
