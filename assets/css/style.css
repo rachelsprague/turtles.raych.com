@@ -311,7 +311,7 @@ body.default-page {
   display: block;
 }
 
-.animals-page img {
+.animals-page-img {
   max-width: 100% !important;
   width: 250px !important;      /* cap width for larger screens */
   height: auto;
