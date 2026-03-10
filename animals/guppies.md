@@ -10,7 +10,7 @@ My planted tanks are home to communities of **guppies**, small livebearing fish 
 <div class="animal-grid">
 
   <div class="animal-card">
-    <img src="/assets/images/animals/animals_guppies.jpg" class="turtle-img" alt="Guppies">
+    <img src="/assets/images/animals/guppies1.jpg" class="turtle-img" alt="Guppies">
       <p><strong>Species: Poecilia reticulata</strong></p>
       <p><strong>Behavior: Active, social fish that constantly explore the tank</strong></p>
       <p><strong>Reproduction: Livebearers — new generations appear regularly</strong></p>

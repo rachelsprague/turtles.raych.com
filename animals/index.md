@@ -19,7 +19,7 @@ permalink: /animals/
   
   <div class="animal-card">
     <a href="/animals/guppies">
-      <img class = "animal-card-img" src="/assets/images/animals/guppies.jpg" alt="Guppy fish">
+      <img class = "animal-card-img" src="/assets/images/animals/animals_guppies.jpg" alt="Guppy fish">
       <h2>🐠 Guppies</h2>
       <p>Colorful livebearers living in planted aquariums.</p>
     </a>
