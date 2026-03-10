@@ -328,8 +328,8 @@ body.default-page {
 }
 
 .animal-card-img {
-  width: 100%;
-  max-width: 220px;  /* small cap */
+  width: 100% !important;
+  max-width: 220px !important;  /* small cap */
   border-radius: 10px;
   margin-bottom: 0.7rem;
 }
