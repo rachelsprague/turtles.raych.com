@@ -310,6 +310,14 @@ body.default-page {
   display: block;
 }
 
+.animals-page img {
+  max-width: 100%;
+  width: 250px;      /* cap width for larger screens */
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 0.5rem;
+}
+
 /* ================================
    Images inside content
    ================================ */
