@@ -9,47 +9,45 @@ permalink: /animals/turtles/
 I have three **red-eared slider turtles**, each around 20 years old.  
 They've been part of my life for decades.
 
----
-
 <div class="animal-grid">
 
+  <!-- Turtle 1 -->
   <div class="animal-card">
-    ![Turtle 1](/assets/images/animals/turtle1.jpg){: .animals-page-img }
-
-    ## 🐢 Turtle #1
-
-    - Species: Red-eared slider
-    - Age: ~20 years
-    - Sex: Female
-    - Notes: She's the biggest. Loves to bask. Likes carrot chips.
-
-    → [View her tank](/tanks/turtle-tank-1/)
+    <img src="/assets/images/animals/turtle1.jpg" class="animals-page-img" alt="Turtle 1">
+    <h2>🐢 Turtle #1</h2>
+    <ul>
+      <li>Species: Red-eared slider</li>
+      <li>Age: ~20 years</li>
+      <li>Sex: Female</li>
+      <li>Notes: She's the biggest. Loves to bask. Likes carrot chips.</li>
+    </ul>
+    <a href="/tanks/turtle-tank-1/">View her tank</a>
   </div>
 
+  <!-- Turtle 2 -->
   <div class="animal-card">
-    ![Turtle 2](/assets/images/animals/turtle2.jpg){: .animals-page-img }
-
-    ## 🐢 Turtle #2
-
-    - Species: Red-eared slider
-    - Age: ~20 years
-    - Sex: Female
-    - Notes: Likes lettuce and dandelion greens. Loves redecorating.
-
-    → [View her tank](/tanks/turtle-tank-1/)
+    <img src="/assets/images/animals/turtle2.jpg" class="animals-page-img" alt="Turtle 2">
+    <h2>🐢 Turtle #2</h2>
+    <ul>
+      <li>Species: Red-eared slider</li>
+      <li>Age: ~20 years</li>
+      <li>Sex: Female</li>
+      <li>Notes: Likes lettuce and dandelion greens. Loves redecorating.</li>
+    </ul>
+    <a href="/tanks/turtle-tank-1/">View her tank</a>
   </div>
 
+  <!-- Turtle 3 -->
   <div class="animal-card">
-    ![Turtle 3](/assets/images/animals/turtle3.jpg){: .animals-page-img }
-
-    ## 🐢 Turtle #3
-
-    - Species: Red-eared slider
-    - Age: ~20 years
-    - Sex: Female
-    - Notes: Loves her terracotta plant pot and guppy friends.
-
-    → [View her tank](/tanks/turtle-tank-2/)
+    <img src="/assets/images/animals/turtle3.jpg" class="animals-page-img" alt="Turtle 3">
+    <h2>🐢 Turtle #3</h2>
+    <ul>
+      <li>Species: Red-eared slider</li>
+      <li>Age: ~20 years</li>
+      <li>Sex: Female</li>
+      <li>Notes: Loves her terracotta plant pot and guppy friends.</li>
+    </ul>
+    <a href="/tanks/turtle-tank-2/">View her tank</a>
   </div>
 
 </div>
