@@ -4,9 +4,9 @@ title: Animals
 permalink: /animals/
 ---
 
-# Animals
+<!-- # Animals
 
-These are the animals that live in my aquariums.
+These are the animals that live in my aquariums. -->
 
 <div class="animal-grid">
 
