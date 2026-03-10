@@ -19,7 +19,7 @@ They've been part of my life for decades.
       <p><strong>Age: ~20 years</strong></p>
       <p><strong>Sex: Female</strong></p>
       <p><strong>Notes: She's the biggest. Loves to bask. Likes carrot chips.</strong></p>
-    <a href="/tanks/turtle-tank-1/">View her tank</a>
+    <a href="/tanks/turtle-tank-1">View her tank</a>
   </div>
 
   <!-- Turtle 2 -->
@@ -30,7 +30,7 @@ They've been part of my life for decades.
       <p><strong>Age: ~20 years</strong></p>
       <p><strong>Sex: Female</strong></p>
       <p><strong>Notes: Likes lettuce and dandelion greens. Loves redecorating.</strong></p>
-    <a href="/tanks/turtle-tank-1/">View her tank</a>
+    <a href="/tanks/turtle-tank-1">View her tank</a>
   </div>
 
   <!-- Turtle 3 -->
@@ -41,5 +41,5 @@ They've been part of my life for decades.
       <p><strong>Age: ~20 years</strong></p>
       <p><strong>Sex: Female</strong></p>
       <p><strong>Notes: Loves her terracotta plant pot and guppy friends.</strong></p>
-    <a href="/tanks/turtle-tank-2/">View her tank</a>
+    <a href="/tanks/turtle-tank-2">View her tank</a>
   </div>
