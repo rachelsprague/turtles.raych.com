@@ -26,9 +26,9 @@ They've been part of my life for decades.
   <div class="animal-card">
     <img src="/assets/images/animals/turtle2.jpg" class="animals-page-img" alt="Turtle 2">
     <h2>🐢 Turtle #2</h2>
-      <p><strong>Species: Red-eared slider</strong></strong></p>
-      <p><strong>Age: ~20 years</strong></strong></p>
-      <p><strong>Sex: Female</strong></strong></p>
+      <p><strong>Species: Red-eared slider</strong></p>
+      <p><strong>Age: ~20 years</strong></p>
+      <p><strong>Sex: Female</strong></p>
       <p><strong>Notes: Likes lettuce and dandelion greens. Loves redecorating.</strong></p>
     <a href="/tanks/turtle-tank-1/">View her tank</a>
   </div>
