@@ -36,6 +36,7 @@ body_class: turtles-page
 
   <!-- Links Section -->
   <h2>Links</h2>
+    <a href="/animals rel="noopener">Animals</a>
     <a href="/tanks" rel="noopener">Aquariums</a>
     <a href="https://www.twitch.tv/raych_com" target="_blank" rel="noopener">🐠 Aquarium Livestream 🐠</a>
     <a href="https://open.spotify.com/user/31ekhjd5x5qoyln7zo4zkv4tneay" target="_blank" rel="noopener">🎧 Playlists 🎧</a>
