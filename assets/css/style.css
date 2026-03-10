@@ -312,8 +312,8 @@ body.default-page {
 }
 
 .animals-page img {
-  max-width: 100%;
-  width: 250px;      /* cap width for larger screens */
+  max-width: 100% !important;
+  width: 250px !important;      /* cap width for larger screens */
   height: auto;
   border-radius: 12px;
   margin-bottom: 0.5rem;
