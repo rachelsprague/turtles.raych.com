@@ -13,7 +13,7 @@ They've been part of my life for decades.
 
   <!-- Turtle 1 -->
   <div class="animal-card">
-    <img src="/assets/images/animals/turtle1.jpg" class="animals-page-img" alt="Turtle 1">
+    <img src="/assets/images/animals/turtle1.jpg" class="turtle-img" alt="Turtle 1">
     <h2>🐢 Turtle #1</h2>
       <p><strong>Species: Red-eared slider</strong></p>
       <p><strong>Age: ~20 years</strong></p>
@@ -24,7 +24,7 @@ They've been part of my life for decades.
 
   <!-- Turtle 2 -->
   <div class="animal-card">
-    <img src="/assets/images/animals/turtle2.jpg" class="animals-page-img" alt="Turtle 2">
+    <img src="/assets/images/animals/turtle2.jpg" class="turtle-img" alt="Turtle 2">
     <h2>🐢 Turtle #2</h2>
       <p><strong>Species: Red-eared slider</strong></p>
       <p><strong>Age: ~20 years</strong></p>
@@ -35,7 +35,7 @@ They've been part of my life for decades.
 
   <!-- Turtle 3 -->
   <div class="animal-card">
-    <img src="/assets/images/animals/turtle3.jpg" class="animals-page-img" alt="Turtle 3">
+    <img src="/assets/images/animals/turtle3.jpg" class="turtle-img" alt="Turtle 3">
     <h2>🐢 Turtle #3</h2>
       <p><strong>Species: Red-eared slider</strong></p>
       <p><strong>Age: ~20 years</strong></p>

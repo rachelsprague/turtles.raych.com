@@ -9,7 +9,7 @@ permalink: /animals/
   <!-- Turtle Card -->
   <div class="animal-card">
     <a href="/animals/turtles">
-      <img src="/assets/images/animals/animals_turtles.jpg" alt="Red-eared slider turtles">
+      <img class = "animal-card-img" src="/assets/images/animals/animals_turtles.jpg" alt="Red-eared slider turtles">
       <h2>🐢 Turtles</h2>
       <p>Three red-eared sliders who have been part of my life for around 20 years.</p>
     </a>
