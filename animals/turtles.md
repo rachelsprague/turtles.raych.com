@@ -4,10 +4,10 @@ title: The Turtles
 permalink: /animals/turtles/
 ---
 
-# The Turtles
+<!-- # The Turtles -->
 
 I have three **red-eared slider turtles**, each around 20 years old.  
-They've been part of my life for decades.
+<!-- They've been part of my life for decades. -->
 
 <div class="animal-grid">
 
