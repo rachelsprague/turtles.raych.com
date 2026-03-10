@@ -444,6 +444,7 @@ body.default-page {
   text-decoration: none;
   font-size: 0.95rem;
   transition: color 0.2s ease;
+  text-align: left;
 }
 
 .nav-links a:hover {
