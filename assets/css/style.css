@@ -281,7 +281,7 @@ body.default-page {
 }
 
 .animal-card {
-  background: #ffffff;
+  background: #fff; /* card background */
   border-radius: 12px;
   padding: 1.2rem;
   text-align: center;
@@ -292,11 +292,13 @@ body.default-page {
 .animal-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  background: #fff; /* ensure hover doesn’t turn card blue */
 }
 
+/* Images inside animal cards */
 .animal-card img {
-  max-width: 100% !important;
-  width: 250px !important; 
+  width: 100%;
+  max-width: 250px;
   border-radius: 10px;
   margin-bottom: 0.7rem;
 }
@@ -305,19 +307,16 @@ body.default-page {
   margin-top: 0.3rem;
 }
 
+/* Links inside animal cards */
 .animal-card a {
-  display: inline-block;
-  margin-top: 0.8rem;
-  padding: 0.6rem 1.2rem;
-  background: #0077cc;
-  color: #fff;
-  border-radius: 8px;
+  display: block;
   text-decoration: none;
-  transition: background 0.2s ease;
+  color: inherit;   /* inherit card text color */
+  background: none; /* remove any link background */
 }
 
 .animal-card a:hover {
-  background: #005fa3;
+  background: none; /* prevent link hover from changing background */
 }
 
 .animals-page-img {
