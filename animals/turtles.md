@@ -20,8 +20,7 @@ They've been part of my life for decades.
 - Sex: Female
 <!-- - Shell length (SCL): 9.5 in -->
 - Notes: She's the biggest. Loves to bask. Likes carrot chips. 
-
-→ [View her tank](/tanks/turtle-tank-1/)
+→ [View her tank](/tanks/turtle-tank-1)
 
 ---
 
@@ -34,8 +33,7 @@ They've been part of my life for decades.
 - Sex: Female
 <!-- - Shell length (SCL): 9.5 in -->
 - Notes: Likes lettuce and dandelion greens. Loves redecorating.
-
-→ [View her tank](/tanks/turtle-tank-1/)
+→ [View her tank](/tanks/turtle-tank-1)
 
 ---
 
@@ -48,5 +46,4 @@ They've been part of my life for decades.
 - Sex: Female
 <!-- - Shell length (SCL): 9.5 in -->
 - Notes: She LOVES the terracotta plant pot in her aquarium - it's not unusual to catch her hanging halfway out of it or descending all the way into it for a snooze. She also loves her guppy friends.
-
-→ [View her tank](/tanks/turtle-tank-2/)
+→ [View her tank](/tanks/turtle-tank-2)
