@@ -15,16 +15,16 @@ permalink: /animals/
     </a>
   </div>
 
-  <!-- Guppy Card (uncomment when ready) -->
-  <!--
+  <!-- Guppy Card -->
+  
   <div class="animal-card">
     <a href="/animals/guppies">
-      <img src="/assets/images/guppies/guppies.jpg" alt="Guppies">
+      <img class = "animal-card-img" src="/assets/images/animals/guppies.jpg" alt="Guppy fish">
       <h2>🐠 Guppies</h2>
       <p>Colorful livebearers living in planted aquariums.</p>
     </a>
   </div>
-  -->
+ 
 
   <!-- Snail Card (uncomment when ready) -->
   <!--
