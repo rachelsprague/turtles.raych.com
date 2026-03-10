@@ -271,6 +271,45 @@ body.default-page {
   color: #005fa3;
 }
 
+/* Animal cards */
+
+.animal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.animal-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.2rem;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.animal-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.animal-card img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 0.7rem;
+}
+
+.animal-card h2 {
+  margin-top: 0.3rem;
+}
+
+.animal-card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
 /* ================================
    Images inside content
    ================================ */
