@@ -13,7 +13,7 @@ They've been part of my life for decades.
 
 ## 🐢 Turtle #1
 
-![Turtle 1](/assets/images/animals/turtle1.jpg)
+![Turtle 1](/assets/images/animals/turtle1.jpg){: .animals-page }
 
 - Species: Red-eared slider
 - Age: ~20 years
@@ -27,7 +27,7 @@ They've been part of my life for decades.
 
 ## 🐢 Turtle #2
 
-![Turtle 2](/assets/images/animals/turtle2.jpg)
+![Turtle 2](/assets/images/animals/turtle2.jpg){: .animals-page }
 
 - Species: Red-eared slider
 - Age: ~20 years
@@ -41,7 +41,7 @@ They've been part of my life for decades.
 
 ## 🐢 Turtle #3
 
-![Turtle 3](/assets/images/animals/turtle3.jpg)
+![Turtle 3](/assets/images/turtles/turtle3.jpg){: .animals-page }
 
 - Species: Red-eared slider
 - Age: ~20 years
