@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Snails
+title: 🐌 Snails
 permalink: /animals/snails/
 ---
 
@@ -10,7 +10,7 @@ Small **Ramshorn snails** live throughout the aquariums. Most arrived as hitchhi
 
 ---
 
-## 🐌 Ramshorn Snails
+<!-- ## 🐌 Ramshorn Snails -->
 
 <div class="animal-card">
     <img src="/assets/images/animals/snails1.png" alt="Ramshorn snails" class="turtle-img">

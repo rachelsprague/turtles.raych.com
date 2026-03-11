@@ -1,6 +1,6 @@
 ---
 layout: default
-title: The Turtles
+title: 🐢 Turtles
 permalink: /animals/turtles/
 ---
 

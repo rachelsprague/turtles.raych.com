@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Guppies
+title: 🐠 Guppies
 permalink: /animals/guppies/
 ---
 
