@@ -15,7 +15,7 @@ Small **Ramshorn snails** live throughout the aquariums. Most arrived as hitchhi
 <div class="animal-card">
     <img src="/assets/images/animals/snails1.png" alt="Ramshorn snails" class="turtle-img">
 
-    <p><strong>Species: Ramshorn snail (*Planorbidae*)</strong></p>
+    <p><strong>Species: Ramshorn snail <i>Planorbidae</i>)</strong></p>
     <p><strong>Origin: Hitchhiked in on live plants</strong></p>
     <p><strong>Role: Clean-up crew</strong></p>
     <p><strong>Notes: Loves grazing and cruising</strong></p>
