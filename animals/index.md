@@ -30,7 +30,7 @@ permalink: /animals/
   
   <div class="animal-card">
     <a href="/animals/snails">
-      <img src="/assets/images/animals/animals_snails.png" class = "animal-card-img alt="Aquarium snails">
+      <img src="/assets/images/animals/animals_snails.png" class = "animal-card-img" alt="Aquarium snails">
       <h2>🐌 Snails</h2>
       <p>Hitchhiker snails that help keep the tanks balanced.</p>
     </a>
