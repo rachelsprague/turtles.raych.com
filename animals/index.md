@@ -26,15 +26,15 @@ permalink: /animals/
   </div>
  
 
-  <!-- Snail Card (uncomment when ready) -->
-  <!--
+  <!-- Snail Card -->
+  
   <div class="animal-card">
     <a href="/animals/snails">
-      <img src="/assets/images/snails/snails.jpg" alt="Aquarium snails">
+      <img src="/assets/images/animals/animals_snails.png" alt="Aquarium snails">
       <h2>🐌 Snails</h2>
       <p>Hitchhiker snails that help keep the tanks balanced.</p>
     </a>
   </div>
-  -->
+ 
 
 </div>

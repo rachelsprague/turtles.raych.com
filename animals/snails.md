@@ -4,28 +4,22 @@ title: Snails
 permalink: /animals/snails/
 ---
 
-# Snails
+# The Snails
 
-The tanks are also home to small **freshwater snails**, most of which arrived as hitchhikers on aquatic plants.
-
-While often considered pests in some aquariums, these snails play an important role in the ecosystem.
+Small **Ramshorn snails** live throughout the aquariums. Most arrived as hitchhikers on aquatic plants.
 
 ---
 
-## What They Do
+## 🐌 Ramshorn Snails
 
-Snails help keep the tank balanced by:
+<div class="animal-card">
+    <img src="/assets/images/animals/snails1.png" alt="Ramshorn snails" class="turtle-img">
 
-- Eating leftover food
-- Cleaning algae from surfaces
-- Breaking down organic material
+    <p><strong>Species:</strong></p> Ramshorn snail (*Planorbidae*)  
+    <p><strong>Origin:</strong></p> Hitchhiked in on live plants  
+    <p><strong>Role:</strong></p> Clean-up crew  
+    <p><strong>Notes:</strong></p> Loves grazing and cruising
 
-They are especially helpful in planted tanks where a small cleanup crew keeps things stable.
+    <a class="btn btn--primary" href="/tanks/snail-tank/">View their tank</a>
 
----
-
-## Tank
-
-The snails primarily live in the plant grow-out tank.
-
-- [Plant / Snail Tank](/tanks)
+</div>
