@@ -31,7 +31,7 @@ body_class: default-page
 
 ## Inhabitants
 
-- **Turtles:** 2 Red-Eared Sliders (~20 years old)  
+- **[Turtles](https://turtles.raych.com/animals/turtles/):** 2 Red-Eared Sliders (~20 years old)  
 - **Tank Mates:** None (turtles only)
 - **Feeding:** Pellets, leafy greens, occasional carrots
 

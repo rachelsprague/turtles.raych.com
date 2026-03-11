@@ -29,7 +29,7 @@ subtitle: Guppy Habitat
 
 ## Inhabitants
 
-- **Guppies:** 
+- **[Guppies](https://turtles.raych.com/animals/guppies/)** 
 - **Tank Mates:** Ramshorn snails
 - **Feeding:** Aquarium Co-op Easy Fry Food
 

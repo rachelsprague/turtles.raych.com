@@ -31,7 +31,7 @@ subtitle: Red-Eared Slider Habitat
 
 ## Inhabitants
 
-- **Turtles:** 1 Red-Eared Slider (~20 years old)  
+- **[Turtles](https://turtles.raych.com/animals/turtles/):** 1 Red-Eared Slider (~20 years old)  
 - **Tank Mates:** lots of guppy fish
 - **Feeding:** Pellets, leafy greens, occasional carrots
 
