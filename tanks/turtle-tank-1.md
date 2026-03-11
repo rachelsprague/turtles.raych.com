@@ -33,7 +33,6 @@ body_class: default-page
 
 - **Turtles:** 2 Red-Eared Sliders (~20 years old)  
 - **Tank Mates:** None (turtles only)
-- **Plants:** None (they eat everything)
 - **Feeding:** Pellets, leafy greens, occasional carrots
 
 ## Notes & History

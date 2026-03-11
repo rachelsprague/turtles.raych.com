@@ -33,7 +33,6 @@ subtitle: Red-Eared Slider Habitat
 
 - **Turtles:** 1 Red-Eared Slider (~20 years old)  
 - **Tank Mates:** lots of guppy fish
-- **Plants:** None (she eats everything)
 - **Feeding:** Pellets, leafy greens, occasional carrots
 
 ## Notes & History
