@@ -4,7 +4,7 @@ title: Snails
 permalink: /animals/snails/
 ---
 
-# The Snails
+<!-- # The Snails -->
 
 Small **Ramshorn snails** live throughout the aquariums. Most arrived as hitchhikers on aquatic plants.
 
