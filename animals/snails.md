@@ -20,6 +20,6 @@ Small **Ramshorn snails** live throughout the aquariums. Most arrived as hitchhi
     <p><strong>Role: Clean-up crew</strong></p>
     <p><strong>Notes: Loves grazing and cruising</strong></p>
 
-    <a class="btn btn--primary" href="/tanks/snails-tank">View their tank</a>
+    <a class="btn btn--primary" href="/tanks/snail-tank">View their tank</a>
 
 </div>
