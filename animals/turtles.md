@@ -18,7 +18,7 @@ I have three **red-eared slider turtles**, each around 20 years old.
       <p><strong>Species: Red-eared slider</strong></p>
       <p><strong>Age: ~20 years</strong></p>
       <p><strong>Sex: Female</strong></p>
-      <p><strong>Notes: Loves basking, bubbles, and diving.  </strong></p>
+      <p><strong>Notes: Loves eating, basking, and diving.</strong></p>
     <a class="btn btn--primary" href="/tanks/turtle-tank-1">View her tank</a>
   </div>
 
@@ -29,7 +29,7 @@ I have three **red-eared slider turtles**, each around 20 years old.
       <p><strong>Species: Red-eared slider</strong></p>
       <p><strong>Age: ~20 years</strong></p>
       <p><strong>Sex: Female</strong></p>
-      <p><strong>Notes: Likes lettuce and dandelion greens. Loves redecorating.</strong></p>
+      <p><strong>Notes: Loves bubbles and redecorating.</strong></p>
     <a class="btn btn--primary" href="/tanks/turtle-tank-1">View her tank</a>
   </div>
 
