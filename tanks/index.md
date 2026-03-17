@@ -84,6 +84,3 @@ title: Aquariums
 <h3>📝 Notes & Observations</h3>
 <p>Over time, I’ll be adding write-ups on tank maintenance, lessons learned, plant growth, and species-specific notes.</p>
 </div>
-
-
-

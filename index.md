@@ -27,6 +27,16 @@ body_class: turtles-page
 
   <!-- Latest Media -->
   <section class="latest">
+    <h2>🐠 Aquarium Livestream 🐠</h2>
+    <div id="twitch-status" class="twitch-card">
+      <a href="https://www.twitch.tv/raych_com" target="_blank" rel="noopener">
+        <div class="status-text">
+          <strong>Stream Offline</strong>
+          <span class="duration"></span>
+        </div>
+      </a>
+    </div>
+
     <h2>Latest Photo</h2>
     <div id="latest-photo"></div>
 
@@ -192,9 +202,43 @@ async function loadBlueskyMedia() {
 
 // Run it
 loadBlueskyMedia();
+
+async function updateTwitchStatus() {
+  const twitchCard = document.getElementById("twitch-status");
+  if (!twitchCard) return;
+
+  try {
+    const username = "raych_com";
+    const response = await fetch(`https://twitchtracker.com/api/v1/twitch/${username}/status`);
+    const data = await response.json();
+
+    // TwitchTracker API returns: { isLive: boolean, duration: "1h 23m" }
+    const isLive = data.isLive;
+    const durationText = data.duration || "";
+
+    const statusText = twitchCard.querySelector(".status-text strong");
+    const durationEl = twitchCard.querySelector(".status-text .duration");
+
+    if (isLive) {
+      twitchCard.classList.add("live");
+      statusText.textContent = "Live Now!";
+      durationEl.textContent = `Streaming for ${durationText}`;
+    } else {
+      twitchCard.classList.remove("live");
+      statusText.textContent = "Stream Offline";
+      durationEl.textContent = "";
+    }
+  } catch (err) {
+    console.error("Failed to update Twitch status:", err);
+  }
+}
+
+// run once on page load
+updateTwitchStatus();
+
+// optional: refresh every 60s
+setInterval(updateTwitchStatus, 60000);
 </script>
-
-
   
   <!-- Hub text -->
   <!--  <p>The turtles racked up 12.6k+ followers and 300k+ likes on TikTok—but I've moved all their content off the platform. You can now follow them on Bluesky <a href="https://bsky.app/profile/turtles.raych.com">@turtles.raych.com</a>.</p>
