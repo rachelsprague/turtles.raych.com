@@ -376,6 +376,13 @@ body.default-page {
   margin-top: 0.3rem;
 }
 
+.tank-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
 /* Links inside animal cards */
 .animal-card a {
   display: block;

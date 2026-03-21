@@ -7,7 +7,7 @@ title: Aquariums
 6 aquariums. 3 turtles. Lots of guppies.
 
 <!-- ## Aquariums -->
-
+<div class = "tank-grid">
 <div class="tank-card">
   <img src="/assets/images/tanks/turtle-tank-1-thumb.jpg" alt="Turtle Tank 1 – 100 gallon red-eared slider habitat" class="tank-thumb"/>
 
@@ -78,6 +78,7 @@ title: Aquariums
   <p><strong>Inhabitants:</strong> Ramshorn snails</p>
 
   <a href="/tanks/plant-tank">View tank details →</a>
+</div>
 </div>
 
 <div class = "tank-card">
