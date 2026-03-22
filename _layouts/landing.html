@@ -50,7 +50,7 @@
     
 </head>
 <body class="{{ page.body_class }}">
-<div id="water-bg">
+<div id="water-bg"></div>
   <main>
     {{ content }}
   </main>
@@ -59,7 +59,6 @@
     &copy; {{ "now" | date: "%Y" }} {% if site.title %}{{ site.title }}{% else %}Raych{% endif %} · 
     <a href="/privacy" style="color:#555; text-decoration:underline;">Privacy Policy</a>
   </footer>
-</div>
 <script>
   /* Water background injector */
 (function () {
