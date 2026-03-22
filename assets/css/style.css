@@ -661,18 +661,18 @@ body.turtles-page {
   min-height: 100vh;
   padding: 1rem;
   box-sizing: border-box;
-}
-
-body.turtles-page {
-  position: relative;
-  background: linear-gradient(180deg, #0d2e1e 0%, #1a4a2e 35%, #1e5c38 65%, #163320 100%);
-  background-attachment: fixed;
+  background: transparent;
 }
 
 #water-bg {
-  position: absolute;
+  position: fixed;
   inset: 0;
   z-index: -1;
   pointer-events: none;
+  will-change: transform;
+}
+
+html {
   background: linear-gradient(180deg, #0d2e1e 0%, #1a4a2e 35%, #1e5c38 65%, #163320 100%);
+  min-height: 100%;
 }
