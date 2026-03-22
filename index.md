@@ -3,7 +3,7 @@ layout: landing
 title: Raych's Turtle Cove
 body_class: turtles-page
 ---
-<div id="water-bg" aria-hidden="true">
+
 <div class="landing-container">
 
   <!-- Logo / Icon -->
@@ -53,7 +53,6 @@ body_class: turtles-page
   <a class="btn btn--primary btn--large btn--block" href="https://www.raych.com" target="_blank" rel="noopener">Raych</a>
   <a class="btn btn--primary btn--large btn--block" href="http://www.raych.com/makes/" target="_blank" rel="noopener">Raych Makes</a>
 
-</div>
 </div>
 
 <script>
@@ -106,11 +105,6 @@ body_class: turtles-page
       bg.appendChild(el);
     });
   })();
-
-
-
-
-
 
 /* ================================
    Load latest Bluesky media
