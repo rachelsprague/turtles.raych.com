@@ -133,10 +133,8 @@ body.turtles-page .landing-container {
 
 .media-card {
   padding: 1rem 2rem;
-  background: #000;
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.5);
-  font-weight: 500;
   font-size: 1.1rem;
   transition: background 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
 }
@@ -599,7 +597,7 @@ footer a:hover {
 
 .post-caption {
   margin-top: 0.5rem;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: var(--your-text-color);
   text-align: center;
 }
