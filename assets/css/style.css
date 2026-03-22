@@ -1,6 +1,10 @@
 /* ================================
    General page styling
    ================================ */
+html {
+  min-height: 100%;
+}
+
 body {
   font-family: system-ui, -apple-system, sans-serif;
   line-height: 1.6;
@@ -31,18 +35,91 @@ main {
   background-attachment: fixed;
 } */
 
+body.turtles-page {
+  position: relative;
+  min-height: 100vh;
+  padding: 0;
+  box-sizing: border-box;
+  background: transparent;
+  overflow-x: hidden;
+}
+
+/* ================================
+   Water background (turtles page)
+   ================================ */
+#water-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, #0d2e1e 0%, #1a4a2e 35%, #1e5c38 65%, #163320 100%);
+}
+
+.caustic {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0;
+  background: radial-gradient(ellipse, rgba(120,210,160,0.18) 0%, rgba(80,180,130,0.08) 50%, transparent 70%);
+  animation: caustic-drift var(--dur) ease-in-out infinite var(--delay);
+}
+
+@keyframes caustic-drift {
+  0%   { opacity: 0;   transform: scale(0.7) translate(0, 0) rotate(0deg); }
+  20%  { opacity: 1; }
+  50%  { opacity: 0.7; transform: scale(1.15) translate(var(--tx), var(--ty)) rotate(var(--rot)); }
+  80%  { opacity: 0.9; }
+  100% { opacity: 0;   transform: scale(0.8) translate(var(--tx2), var(--ty2)) rotate(var(--rot2)); }
+}
+
+.ray {
+  position: absolute;
+  top: -10%;
+  border-radius: 50%;
+  transform-origin: top center;
+  animation: ray-breathe var(--rdur) ease-in-out infinite var(--rdelay);
+}
+
+@keyframes ray-breathe {
+  0%   { opacity: 0; }
+  30%  { opacity: var(--rop); }
+  70%  { opacity: var(--rop); }
+  100% { opacity: 0; }
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(140,220,170,0.25);
+  background: rgba(140,220,170,0.06);
+  animation: bubble-rise var(--bdur) ease-in infinite var(--bdelay);
+}
+
+@keyframes bubble-rise {
+  0%   { transform: translateY(0) translateX(0) scale(1); opacity: 0; }
+  10%  { opacity: 0.7; }
+  90%  { opacity: 0.4; }
+  100% { transform: translateY(-120px) translateX(var(--bx)) scale(0.6); opacity: 0; }
+}
+
 /* ================================
    Landing page container
    ================================ */
 .landing-container {
+  position: relative;
+  z-index: 1;
   background: rgba(17, 17, 17, 0.85);
   color: #eee;
   border-radius: 20px;
   padding: 2.5rem 2rem;
   max-width: 400px;
-  margin: 2rem;
+  width: calc(100% - 2rem);
+  margin: 2rem auto;
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
 }
 
 /* Turtle Cove subtle green accent */
@@ -131,22 +208,32 @@ body.turtles-page .landing-container {
   transform: scale(1.02);
 }
 
+/* ================================
+   Media card
+   ================================ */
 .media-card {
   padding: .1rem .9rem;
-  background: rgba(255, 255, 255, 0.05);  /* subtle translucent background */
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.5);
   font-size: 1.1rem;
   transition: background 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
 }
 
+.post-caption {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #ccc;
+  text-align: center;
+}
+
 /* ================================
    Twitch stream card
-=============================== */
+   ================================ */
 .twitch-card {
-  background: rgba(255, 255, 255, 0.05);  /* subtle translucent background */
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 12px;
-  padding: 0.8rem 1rem;  
+  padding: 0.8rem 1rem;
   max-width: 260px;
   margin: 1rem auto 2rem;
   color: #eee;
@@ -201,7 +288,6 @@ body.turtles-page .landing-container {
   50% { box-shadow: 0 0 12px rgba(78,228,78,0.6); }
 }
 
-/* Responsive tweaks */
 @media screen and (max-width: 480px) {
   .twitch-card {
     max-width: 100%;
@@ -306,7 +392,7 @@ body.default-page {
 }
 
 /* ================================
-   Tank cards (used on /tanks/index.md)
+   Tank cards
    ================================ */
 .tank-card {
   background: #fff;
@@ -349,8 +435,9 @@ body.default-page {
   color: #005fa3;
 }
 
-/* Animal cards */
-
+/* ================================
+   Animal cards
+   ================================ */
 .animal-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -359,7 +446,7 @@ body.default-page {
 }
 
 .animal-card {
-  background: #fff; /* card background */
+  background: #fff;
   border-radius: 12px;
   padding: 1.2rem;
   text-align: center;
@@ -370,10 +457,9 @@ body.default-page {
 .animal-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-  background: #fff; /* ensure hover doesn’t turn card blue */
+  background: #fff;
 }
 
-/* Images inside animal cards */
 .animal-card img {
   width: 100%;
   max-width: 250px;
@@ -392,21 +478,20 @@ body.default-page {
   margin-top: 1.5rem;
 }
 
-/* Links inside animal cards */
 .animal-card a {
   display: block;
   text-decoration: none;
-  color: inherit;   /* inherit card text color */
-  background: none; /* remove any link background */
+  color: inherit;
+  background: none;
 }
 
 .animal-card a:hover {
-  background: none; /* prevent link hover from changing background */
+  background: none;
 }
 
 .animals-page-img {
   max-width: 100% !important;
-  width: 250px !important;      /* cap width for larger screens */
+  width: 250px !important;
   height: auto;
   border-radius: 12px;
   margin-bottom: 0.5rem;
@@ -414,7 +499,7 @@ body.default-page {
 
 .animal-card-img {
   width: 100% !important;
-  max-width: 220px !important;  /* small cap */
+  max-width: 220px !important;
   border-radius: 10px;
   margin-bottom: 0.7rem;
 }
@@ -427,6 +512,9 @@ body.default-page {
   display: block;
 }
 
+/* ================================
+   Buttons
+   ================================ */
 .btn.btn--primary {
   display: inline-block;
   background: #000;
@@ -496,11 +584,10 @@ body.default-page {
 /* ================================
    Site Navigation
    ================================ */
-
 .site-nav {
   background: #111;
   padding: 0.75rem 2rem;
-  margin: -2rem -2rem 2rem -2rem; /* cancel body padding */
+  margin: -2rem -2rem 2rem -2rem;
 }
 
 .nav-inner {
@@ -518,7 +605,6 @@ body.default-page {
   font-size: 1.1rem;
 }
 
-/* Links (desktop default) */
 .nav-links {
   display: flex;
   gap: 1.5rem;
@@ -536,7 +622,6 @@ body.default-page {
   color: #fff;
 }
 
-/* Hamburger button */
 .nav-toggle {
   display: none;
   background: none;
@@ -546,12 +631,7 @@ body.default-page {
   cursor: pointer;
 }
 
-/* ================================
-   Mobile styles
-   ================================ */
-
 @media (max-width: 768px) {
-
   .nav-toggle {
     display: block;
   }
@@ -583,7 +663,7 @@ footer {
   margin-top: 3rem;
   padding: 1.5rem 0;
   border-top: 1px solid rgba(0,0,0,0.05);
-  background: transparent; /* keeps background consistent with page */
+  background: transparent;
 }
 
 footer a {
@@ -594,85 +674,4 @@ footer a {
 
 footer a:hover {
   color: #222;
-}
-
-.post-caption {
-  margin-top: 0.5rem;
-  font-size: 0.85rem;
-  color: var(--your-text-color);
-  text-align: center;
-}
-
-/* Water background */
-.caustic {
-  position: absolute;
-  border-radius: 50%;
-  opacity: 0;
-  background: radial-gradient(ellipse, rgba(120,210,160,0.18) 0%, rgba(80,180,130,0.08) 50%, transparent 70%);
-  animation: caustic-drift var(--dur) ease-in-out infinite var(--delay);
-}
-
-@keyframes caustic-drift {
-  0%   { opacity: 0;   transform: scale(0.7) translate(0, 0) rotate(0deg); }
-  20%  { opacity: 1; }
-  50%  { opacity: 0.7; transform: scale(1.15) translate(var(--tx), var(--ty)) rotate(var(--rot)); }
-  80%  { opacity: 0.9; }
-  100% { opacity: 0;   transform: scale(0.8) translate(var(--tx2), var(--ty2)) rotate(var(--rot2)); }
-}
-
-.ray {
-  position: absolute;
-  top: -10%;
-  border-radius: 50%;
-  transform-origin: top center;
-  animation: ray-breathe var(--rdur) ease-in-out infinite var(--rdelay);
-}
-
-@keyframes ray-breathe {
-  0%   { opacity: 0; }
-  30%  { opacity: var(--rop); }
-  70%  { opacity: var(--rop); }
-  100% { opacity: 0; }
-}
-
-.bubble {
-  position: absolute;
-  border-radius: 50%;
-  border: 1px solid rgba(140,220,170,0.25);
-  background: rgba(140,220,170,0.06);
-  animation: bubble-rise var(--bdur) ease-in infinite var(--bdelay);
-}
-
-@keyframes bubble-rise {
-  0%   { transform: translateY(0) translateX(0) scale(1); opacity: 0; }
-  10%  { opacity: 0.7; }
-  90%  { opacity: 0.4; }
-  100% { transform: translateY(-120px) translateX(var(--bx)) scale(0.6); opacity: 0; }
-}
-
-.landing-container {
-  position: relative;
-  z-index: 1;
-}
-
-body.turtles-page {
-  position: relative;
-  z-index: 0;
-  min-height: 100vh;
-  padding: 1rem;
-  box-sizing: border-box;
-  background: transparent;
-}
-
-#water-bg {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  will-change: transform;
-}
-
-html {
-  background: linear-gradient(180deg, #0d2e1e 0%, #1a4a2e 35%, #1e5c38 65%, #163320 100%);
-  min-height: 100%;
 }
