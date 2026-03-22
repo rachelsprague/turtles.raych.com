@@ -11,7 +11,7 @@ Small **Ramshorn snails** live throughout the aquariums. Most arrived as hitchhi
 ---
 
 <!-- ## 🐌 Ramshorn Snails -->
-
+<div class="animal-grid">
 <div class="animal-card">
     <img src="/assets/images/animals/snails1.png" alt="Ramshorn snails" class="animals-page-img">
 
@@ -22,4 +22,5 @@ Small **Ramshorn snails** live throughout the aquariums. Most arrived as hitchhi
 
     <a class="btn btn--primary" href="/tanks/snail-tank">View their tank</a>
 
+</div>
 </div>
