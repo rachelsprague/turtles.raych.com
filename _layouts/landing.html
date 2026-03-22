@@ -31,6 +31,53 @@
         window['ga-disable-' + GA_ID] = true; 
       }
 
+      /* Water background injector */
+      (function () {
+        const bg = document.getElementById('water-bg');
+        if (!bg) return;
+
+        const rays = [
+          { left: '28%', w: '60px', h: '80%', rdur: '9s',  rdelay: '0s',  rop: '0.18' },
+          { left: '62%', w: '50px', h: '72%', rdur: '12s', rdelay: '-5s', rop: '0.15' },
+        ];
+        rays.forEach(r => {
+          const el = document.createElement('div');
+          el.className = 'ray';
+          el.style.cssText = `left:${r.left};width:${r.w};height:${r.h};background:radial-gradient(ellipse at top, rgba(140,220,170,0.26) 0%, rgba(120,200,155,0.09) 45%, transparent 75%);--rdur:${r.rdur};--rdelay:${r.rdelay};--rop:${r.rop};`;
+          bg.appendChild(el);
+        });
+
+        const caustics = [
+          { l:'10%', t:'20%', w:'180px', h:'120px', dur:'9s',  delay:'0s',    tx:'20px',  ty:'15px',  rot:'25deg',  tx2:'-10px', ty2:'8px',  rot2:'-10deg' },
+          { l:'55%', t:'15%', w:'220px', h:'140px', dur:'11s', delay:'-3s',   tx:'-25px', ty:'20px',  rot:'-20deg', tx2:'15px',  ty2:'12px', rot2:'30deg'  },
+          { l:'30%', t:'50%', w:'160px', h:'100px', dur:'8s',  delay:'-1.5s', tx:'15px',  ty:'-10px', rot:'15deg',  tx2:'-8px',  ty2:'5px',  rot2:'-20deg' },
+          { l:'70%', t:'55%', w:'200px', h:'130px', dur:'12s', delay:'-5s',   tx:'-20px', ty:'10px',  rot:'-30deg', tx2:'10px',  ty2:'-8px', rot2:'20deg'  },
+          { l:'5%',  t:'65%', w:'150px', h:'90px',  dur:'7s',  delay:'-2s',   tx:'12px',  ty:'-15px', rot:'20deg',  tx2:'-6px',  ty2:'10px', rot2:'-15deg' },
+          { l:'45%', t:'70%', w:'190px', h:'110px', dur:'10s', delay:'-4s',   tx:'-15px', ty:'-12px', rot:'-25deg', tx2:'8px',   ty2:'-6px', rot2:'15deg'  },
+        ];
+        caustics.forEach(c => {
+          const el = document.createElement('div');
+          el.className = 'caustic';
+          el.style.cssText = `left:${c.l};top:${c.t};width:${c.w};height:${c.h};--dur:${c.dur};--delay:${c.delay};--tx:${c.tx};--ty:${c.ty};--rot:${c.rot};--tx2:${c.tx2};--ty2:${c.ty2};--rot2:${c.rot2};`;
+          bg.appendChild(el);
+        });
+
+        const bubbles = [
+          { l:'15%', s:'6px', dur:'8s',  delay:'0s'    },
+          { l:'28%', s:'4px', dur:'11s', delay:'-3s'   },
+          { l:'44%', s:'7px', dur:'9s',  delay:'-1.5s' },
+          { l:'60%', s:'5px', dur:'12s', delay:'-5s'   },
+          { l:'75%', s:'4px', dur:'7s',  delay:'-2s'   },
+          { l:'88%', s:'6px', dur:'10s', delay:'-4s'   },
+        ];
+        bubbles.forEach(b => {
+          const el = document.createElement('div');
+          el.className = 'bubble';
+          const bx = (Math.random() * 20 - 10).toFixed(0) + 'px';
+          el.style.cssText = `left:${b.l};bottom:0;width:${b.s};height:${b.s};--bdur:${b.dur};--bdelay:${b.delay};--bx:${bx};`;
+          bg.appendChild(el);
+        });
+      })();
     </script>
 
     <!-- Load GA -->
@@ -47,6 +94,7 @@
     
 </head>
 <body class="{{ page.body_class }}">
+<div id="water-bg" aria-hidden="true">
   <main>
     {{ content }}
   </main>
@@ -55,6 +103,6 @@
     &copy; {{ "now" | date: "%Y" }} {% if site.title %}{{ site.title }}{% else %}Raych{% endif %} · 
     <a href="/privacy" style="color:#555; text-decoration:underline;">Privacy Policy</a>
   </footer>
-    
+</div>
 </body>
 </html>
