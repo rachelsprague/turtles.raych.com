@@ -119,22 +119,26 @@ async function loadBlueskyMedia() {
     // Display photo
     if (latestPhoto && photoEl) {
       photoEl.innerHTML = `
-        <a href="https://bsky.app/profile/${handle}/post/${latestPhoto.rkey}" target="_blank" rel="noopener">
-          <img src="${latestPhoto.url}" style="max-width:100%;border-radius:12px;">
-        </a>
-        ${latestPhoto.text ? `<p class="post-caption">${latestPhoto.text}</p>` : ""}`;
+        <div class="media-card">
+          <a href="https://bsky.app/profile/${handle}/post/${latestPhoto.rkey}" target="_blank" rel="noopener">
+            <img src="${latestPhoto.url}" style="max-width:100%;border-radius:12px;">
+          </a>
+          ${latestPhoto.text ? `<p class="post-caption">${latestPhoto.text}</p>` : ""}
+        </div>`;
     } else if (photoEl) photoEl.textContent = "No recent photo.";
 
     // Display video
     if (latestVideo && videoEl) {
       videoEl.innerHTML = `
-        <a href="https://bsky.app/profile/${handle}/post/${latestVideo.rkey}" target="_blank" rel="noopener">
-          <video controls style="max-width:100%;border-radius:12px;" ${latestVideo.thumb ? `poster="${latestVideo.thumb}"` : ""}>
-            <source src="${latestVideo.url}">
-            Your browser does not support the video tag.
-          </video>
-        </a>
-        ${latestVideo.text ? `<p class="post-caption">${latestVideo.text}</p>` : ""}`;
+        <div class="media-card">
+          <a href="https://bsky.app/profile/${handle}/post/${latestVideo.rkey}" target="_blank" rel="noopener">
+            <video controls style="max-width:100%;border-radius:12px;" ${latestVideo.thumb ? `poster="${latestVideo.thumb}"` : ""}>
+              <source src="${latestVideo.url}">
+              Your browser does not support the video tag.
+            </video>
+          </a>
+          ${latestVideo.text ? `<p class="post-caption">${latestVideo.text}</p>` : ""}
+        </div>`;
     } else if (videoEl) videoEl.textContent = "No recent video.";
 
   } catch (err) {
