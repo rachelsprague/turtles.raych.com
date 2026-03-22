@@ -19,11 +19,11 @@ main {
 /* ================================
    Landing page backgrounds
    ================================ */
-/* body.home-page {
-  background: url('/assets/images/raych-background.png') no-repeat center center;
+body.home-page {
+  /* background: url('/assets/images/raych-background.png') no-repeat center center;
   background-size: cover;
-  background-attachment: fixed;
-} */
+  background-attachment: fixed; */
+}
 
 body.turtles-page {
   background: url('/assets/images/turtle-background.jpg') no-repeat center center;
