@@ -1,7 +1,7 @@
 /* ================================
    Water background
    ================================ */
-#water-bg {
+/* #water-bg {
   position: absolute;
   top: 0;
   left: 0;
@@ -10,7 +10,7 @@
   z-index: 0;
   pointer-events: none;
   background: linear-gradient(180deg, #0d2e1e 0%, #1a4a2e 35%, #1e5c38 65%, #163320 100%);
-}
+} */
 
 .caustic {
   position: absolute;
