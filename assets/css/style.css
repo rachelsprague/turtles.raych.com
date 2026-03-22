@@ -31,6 +31,11 @@ body.home-page {
   background-attachment: fixed;
 } */
 
+body.turtles-page {
+  position: relative;
+  z-index: 0;
+}
+
 /* ================================
    Landing page container
    ================================ */
@@ -43,6 +48,8 @@ body.home-page {
   margin: 2rem auto;
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  position: relative;
+  z-index: 1;
 }
 
 /* Turtle Cove subtle green accent */
