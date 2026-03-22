@@ -57,3 +57,8 @@
   90%  { opacity: 0.4; }
   100% { transform: translateY(-120px) translateX(var(--bx)) scale(0.6); opacity: 0; }
 }
+
+#water-bg,
+#water-bg * {
+  pointer-events: none;
+}
