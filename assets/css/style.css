@@ -19,11 +19,11 @@ main {
 /* ================================
    Landing page backgrounds
    ================================ */
-body.home-page {
+/* body.home-page {
   background: url('/assets/images/raych-background.png') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
-}
+} */
 
 body.turtles-page {
   background: url('/assets/images/turtle-background.jpg') no-repeat center center;
@@ -601,4 +601,59 @@ footer a:hover {
   font-size: 0.85rem;
   color: var(--your-text-color);
   text-align: center;
+}
+
+/* Water background */
+#water-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(180deg, #0d2e1e 0%, #1a4a2e 35%, #1e5c38 65%, #163320 100%);
+  overflow: hidden;
+}
+
+.caustic {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0;
+  background: radial-gradient(ellipse, rgba(120,210,160,0.18) 0%, rgba(80,180,130,0.08) 50%, transparent 70%);
+  animation: caustic-drift var(--dur) ease-in-out infinite var(--delay);
+}
+
+@keyframes caustic-drift {
+  0%   { opacity: 0;   transform: scale(0.7) translate(0, 0) rotate(0deg); }
+  20%  { opacity: 1; }
+  50%  { opacity: 0.7; transform: scale(1.15) translate(var(--tx), var(--ty)) rotate(var(--rot)); }
+  80%  { opacity: 0.9; }
+  100% { opacity: 0;   transform: scale(0.8) translate(var(--tx2), var(--ty2)) rotate(var(--rot2)); }
+}
+
+.ray {
+  position: absolute;
+  top: -10%;
+  border-radius: 50%;
+  transform-origin: top center;
+  animation: ray-breathe var(--rdur) ease-in-out infinite var(--rdelay);
+}
+
+@keyframes ray-breathe {
+  0%   { opacity: 0; }
+  30%  { opacity: var(--rop); }
+  70%  { opacity: var(--rop); }
+  100% { opacity: 0; }
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(140,220,170,0.25);
+  background: rgba(140,220,170,0.06);
+  animation: bubble-rise var(--bdur) ease-in infinite var(--bdelay);
+}
+
+@keyframes bubble-rise {
+  0%   { transform: translateY(0) translateX(0) scale(1); opacity: 0; }
+  10%  { opacity: 0.7; }
+  90%  { opacity: 0.4; }
+  100% { transform: translateY(-120px) translateX(var(--bx)) scale(0.6); opacity: 0; }
 }
