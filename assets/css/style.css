@@ -131,6 +131,16 @@ body.turtles-page .landing-container {
   transform: scale(1.02);
 }
 
+.media-card {
+  padding: 1rem 2rem;
+  background: #000;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: background 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+
 /* ================================
    Twitch stream card
 =============================== */
