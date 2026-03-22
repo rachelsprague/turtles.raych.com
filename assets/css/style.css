@@ -586,3 +586,10 @@ footer a {
 footer a:hover {
   color: #222;
 }
+
+.post-caption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--your-text-color);
+  text-align: center;
+}

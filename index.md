@@ -64,6 +64,11 @@ async function loadBlueskyMedia() {
   const photoEl = document.getElementById("latest-photo");
   const videoEl = document.getElementById("latest-video");
 
+  // Strip hashtags from post text
+  function stripHashtags(text) {
+    return text.replace(/#\S+/g, "").replace(/\s{2,}/g, " ").trim();
+  }
+
   try {
     const res = await fetch(
       `https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=${encodeURIComponent(handle)}&filter=posts_with_media&limit=50`
@@ -81,26 +86,29 @@ async function loadBlueskyMedia() {
       const embed = post.embed;
       if (!embed) continue;
 
+      const postText = stripHashtags(post.record?.text || "");
+
       // Photo
       if (!latestPhoto && embed.$type === "app.bsky.embed.images#view" && embed.images?.length > 0) {
         const img = embed.images[0];
-        latestPhoto = { url: img.fullsize || img.thumb, rkey: post.uri.split("/").pop() };
+        latestPhoto = { url: img.fullsize || img.thumb, rkey: post.uri.split("/").pop(), text: postText };
       }
 
       // Video
       if (!latestVideo) {
         if ((embed.$type === "app.bsky.embed.video#view" || embed.$type === "app.bsky.embed.video#viewExternal") && embed.playlist) {
-          latestVideo = { url: embed.playlist, rkey: post.uri.split("/").pop(), thumb: embed.thumbnail || "" };
+          latestVideo = { url: embed.playlist, rkey: post.uri.split("/").pop(), thumb: embed.thumbnail || "", text: postText };
         } else if (embed.$type === "app.bsky.embed.external#view" && /\.(mp4|mov|webm|mpeg)(\?|$)/i.test(embed.external?.uri || "")) {
           latestVideo = {
             url: embed.external.uri,
             rkey: post.uri.split("/").pop(),
-            thumb: embed.external.thumb?.fullsize || embed.external.thumb?.thumb || ""
+            thumb: embed.external.thumb?.fullsize || embed.external.thumb?.thumb || "",
+            text: postText
           };
         } else if (embed.$type === "app.bsky.embed.recordWithMedia#view" && embed.media) {
           const media = embed.media;
           if ((media.$type === "app.bsky.embed.video#view" || media.$type === "app.bsky.embed.video#viewExternal") && media.playlist) {
-            latestVideo = { url: media.playlist, rkey: post.uri.split("/").pop(), thumb: media.thumbnail || "" };
+            latestVideo = { url: media.playlist, rkey: post.uri.split("/").pop(), thumb: media.thumbnail || "", text: postText };
           }
         }
       }
@@ -113,7 +121,8 @@ async function loadBlueskyMedia() {
       photoEl.innerHTML = `
         <a href="https://bsky.app/profile/${handle}/post/${latestPhoto.rkey}" target="_blank" rel="noopener">
           <img src="${latestPhoto.url}" style="max-width:100%;border-radius:12px;">
-        </a>`;
+        </a>
+        ${latestPhoto.text ? `<p class="post-caption">${latestPhoto.text}</p>` : ""}`;
     } else if (photoEl) photoEl.textContent = "No recent photo.";
 
     // Display video
@@ -124,7 +133,8 @@ async function loadBlueskyMedia() {
             <source src="${latestVideo.url}">
             Your browser does not support the video tag.
           </video>
-        </a>`;
+        </a>
+        ${latestVideo.text ? `<p class="post-caption">${latestVideo.text}</p>` : ""}`;
     } else if (videoEl) videoEl.textContent = "No recent video.";
 
   } catch (err) {
