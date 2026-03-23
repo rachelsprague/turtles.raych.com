@@ -22,7 +22,7 @@ I have three **red-eared slider turtles**, each around 20 years old.
 
   <!-- Left Eye -->
   <div class="animal-card">
-    <img src="/assets/images/animals/turtle3.jpg" class="turtle-img" alt="Left Eye">
+    <img src="/assets/images/animals/turtle2.jpg" class="turtle-img" alt="Left Eye">
     <h2>Left Eye</h2>
       <p><strong>🐢 Red-eared slider | Female | ~20 years</strong></p>
       <p>Medium sized. Maximum energy. Feisty, scrappy, and brings the chaos.</p>
@@ -31,7 +31,7 @@ I have three **red-eared slider turtles**, each around 20 years old.
 
   <!-- Chilli -->
   <div class="animal-card">
-    <img src="/assets/images/animals/turtle2.jpg" class="turtle-img" alt="Chilli">
+    <img src="/assets/images/animals/turtle3.jpg" class="turtle-img" alt="Chilli">
     <h2>Chilli</h2>
     <p><strong>🐢 Red-eared slider | Female | ~20 years</strong></p>
       <p>The smallest of the bunch and coexists with her own community of guppy friends. She enjoys hanging out in her terracotta pot cottage and sleeps in it most nights</p>
