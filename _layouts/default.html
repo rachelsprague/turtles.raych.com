@@ -62,22 +62,7 @@
 
   <body class="{{ page.body_class }}">
 
-    <nav class="site-nav">
-      <div class="nav-inner">
-        <a href="/" class="nav-logo">Raych's Turtle Cove</a>
-
-        <button class="nav-toggle" aria-label="Toggle menu">
-          ☰
-        </button>
-
-        <div class="nav-links">
-          <a href="/">Home</a>
-          <a href="/tanks/">Aquariums</a>
-          <a href="/animals/">Animals</a>
-          <!-- <a href="/about/">About</a> -->
-        </div>
-      </div>
-    </nav>
+    {% include nav.html %}
 
     <main class="page-container">
       {% if page.title %}
@@ -103,10 +88,7 @@
       });
     </script>
 
-    <footer style="text-align:center; font-size:0.9rem; color:#555; margin-top:3rem;">
-      &copy; {{ "now" | date: "%Y" }} {% if site.title %}{{ site.title }}{% else %}Raych{% endif %} · 
-      <a href="/privacy" style="color:#555; text-decoration:underline;">Privacy Policy</a>
-    </footer>
+    {% include footer.html %}
     
   </body>
 </html>
