@@ -1,0 +1,17 @@
+---
+layout: default
+title: Blog
+body_class: blog-index
+extra_css:
+  - /assets/css/blog.css
+---
+
+<div class="blog-index">
+  {% if site.posts.size > 0 %}
+    {% for post in site.posts %}
+      {% include post-card.html %}
+    {% endfor %}
+  {% else %}
+    <p>Posts coming soon.</p>
+  {% endif %}
+</div>
