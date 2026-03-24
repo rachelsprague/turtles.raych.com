@@ -7,6 +7,8 @@ description: "Twenty years in, my three red-eared sliders finally have names."
 affiliate: false
 image: /assets/images/og/2026-03-23-crazysexycoolraych.png
 hide_title: true
+extra_css:
+  - /assets/css/blog.css
 ---
 
 I've had my three red-eared sliders for 20 years. And for 20 years, they had no names. It wasn't intentional, it just never happened. They were always just "The Turtles." 
