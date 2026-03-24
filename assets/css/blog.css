@@ -76,9 +76,18 @@
   margin-bottom: 0.5rem;
 }
 
+.post-description {
+  font-size: 1rem;
+  color: #444;
+  font-style: italic;
+  margin-bottom: 0.4rem;
+}
+
 .post-meta {
   font-size: 0.85rem;
-  color: #777;
+  color: #aaa;
+  font-style: italic;
+  margin-bottom: 1.5rem;
 }
 
 .post-tag {
@@ -129,6 +138,22 @@
   height: auto;
   border-radius: 6px;
   margin: 1.5rem 0;
+}
+
+.post-footer {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.back-to-blog {
+  font-size: 0.9rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.back-to-blog:hover {
+  text-decoration: underline;
 }
 
 /* Affiliate disclosure */

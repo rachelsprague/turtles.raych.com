@@ -65,7 +65,7 @@
     {% include nav.html %}
 
     <main class="page-container">
-      {% if page.title %}
+      {% if page.title and page.hide_title != true %}
         <header class="page-header">
           <h1>{{ page.title }}</h1>
           {% if page.subtitle %}
