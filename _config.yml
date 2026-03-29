@@ -2,3 +2,5 @@ title: Raych's Turtle Cove
 description: Turtles and planted guppy tanks
 theme: null
 markdown: kramdown
+plugins:
+  - jekyll-feed
